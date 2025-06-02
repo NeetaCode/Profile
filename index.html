@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Portfolio</title>
+  <title>Jane Doe - Portfolio</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -60,12 +60,42 @@
       padding: 0.7rem 1rem;
       border-radius: 4px;
     }
+    a {
+      color: #0077cc;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .job {
+      margin-bottom: 1.5rem;
+    }
+    .job-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .job-company {
+      font-style: italic;
+      color: #555;
+    }
+    .job-dates {
+      float: right;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .job-description {
+      margin-top: 0.4rem;
+      margin-left: 1rem;
+    }
+    .job-description li {
+      margin-bottom: 0.4rem;
+    }
     footer {
       text-align: center;
       padding: 1rem;
       background: #222;
       color: white;
       margin-top: 3rem;
+      clear: both;
     }
   </style>
 </head>
@@ -75,6 +105,7 @@
     <h1>Jane Doe</h1>
     <nav>
       <a href="#about">About Me</a>
+      <a href="#professional">Professional Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -84,8 +115,97 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-          ML Engineer with 8+ years of experience in software engineering, applied machine learning, and scalable cloud-native development across the U.S. and India. Skilled in developing and deploying deep learning and reinforcement learning models using Python, TensorFlow, PyTorch, Scikit-learn, and MLflow.
+        ML Engineer with 8+ years of experience in software engineering, applied machine learning, and scalable cloud-native development across the U.S. and India. Skilled in developing and deploying deep learning and reinforcement learning models using Python, TensorFlow, PyTorch, Scikit-learn, and MLflow.
       </p>
+      <p>
+        Hands-on experience with natural language processing (NLP), prompt engineering, and large language models (LLMs), including fine-tuning and inference with Hugging Face Transformers. Proficient in building end-to-end pipelines for both structured and unstructured data, with expertise in GCP, Azure, Docker, and Kubernetes (AKS).
+      </p>
+      <p>
+        Demonstrated success in applying machine learning for real-world use cases in conversational AI, multimodal applications, and on-device optimization. Strong collaborator with a background in cross-disciplinary research, technical mentorship, and clear communication of complex AI concepts.
+      </p>
+    </section>
+
+    <section id="professional">
+      <h2>Professional Experience</h2>
+
+      <div class="job">
+        <div>
+          <span class="job-title">Research Assistant</span>, 
+          <span class="job-company">UCCS CS Department, Colorado Springs, CO, USA</span>
+          <span class="job-dates">August 2023 – May 2024</span>
+        </div>
+        <ul class="job-description">
+          <li>Built cloud-native ML pipelines with Python, Docker, Kubernetes, and GCP for real-time and batch data processing, enhancing scalability and speeding insights.</li>
+          <li>Optimized AI/ML text analytics models, boosting customer insights and pipeline efficiency by 25%, lowering cloud and labor costs.</li>
+          <li>Developed interactive visualizations and fostered cross-team collaboration to accelerate AI solution delivery and adoption.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div>
+          <span class="job-title">Network Assistant</span>, 
+          <span class="job-company">UCCS OIT, Colorado Springs, CO, USA</span>
+          <span class="job-dates">June 2024 – Present</span>
+        </div>
+        <ul class="job-description">
+          <li>Automated network workflows with Python, cutting manual effort by 40% and boosting engineering efficiency.</li>
+          <li>Managed Linux and Windows systems to optimize model hosting and monitoring, accelerating deployment cycles.</li>
+          <li>Improved infrastructure reliability through scalable setups and enhanced performance monitoring, reducing downtime and smooth operations.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div>
+          <span class="job-title">Computer Science Tutor</span>, 
+          <span class="job-company">UCCS Maths Centre, Colorado Springs, CO, USA</span>
+          <span class="job-dates">August 2023 – Present</span>
+        </div>
+        <ul class="job-description">
+          <li>Enhanced code quality in Python, Java, and C/C++, increasing project success and reducing debugging time.</li>
+          <li>Fostered collaboration through pair programming and code reviews, strengthening team skills and communication.</li>
+          <li>Mentored students in algorithms, modular design, and debugging, enhancing their understanding of the subject.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div>
+          <span class="job-title">Senior Software Engineer</span>, 
+          <span class="job-company">Accolite Digital, Bangalore, India</span>
+          <span class="job-dates">August 2021 – January 2023</span>
+        </div>
+        <ul class="job-description">
+          <li>Developed backend tools and automated test scripts using Python and .NET Core, reducing manual testing by 60% and bugs by 85%, improving product quality and release speed.</li>
+          <li>Streamlined CI/CD with Jenkins and Azure DevOps, cutting deployment time by 30% and enhancing release reliability.</li>
+          <li>Optimized SQL Server and managed cross-platform systems, boosting uptime and performance, while ensuring timely delivery through Agile reporting and stakeholder communication.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div>
+          <span class="job-title">Software Consultant</span>, 
+          <span class="job-company">Capgemini, Bangalore, India</span>
+          <span class="job-dates">November 2019 – August 2021</span>
+        </div>
+        <ul class="job-description">
+          <li>Automated backend tasks and data validation with Java, Postman, and Selenium, cutting manual effort and boosting data accuracy and workflow speed.</li>
+          <li>Enhanced Oracle and SQL Server performance and enforced secure coding via SonarQube, improving compliance and reducing bugs.</li>
+          <li>Worked in Agile teams to speed up delivery and improve release quality, increasing customer satisfaction and business agility.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div>
+          <span class="job-title">Systems Engineer</span>, 
+          <span class="job-company">Tata Consultancy Services, Bangalore, India</span>
+          <span class="job-dates">June 2015 – November 2019</span>
+        </div>
+        <ul class="job-description">
+          <li>Automated deployments and system tasks using Jenkins, PowerShell, and Bash, speeding up releases and reducing errors.</li>
+          <li>Boosted software quality and security with Selenium, Maven, TestNG, and SonarQube, cutting manual testing by 30% and minimizing risks.</li>
+          <li>Improved performance and scalability through Oracle/SQL optimizations and Docker, paving the way for Kubernetes-based cloud adoption.</li>
+        </ul>
+      </div>
+
     </section>
 
     <section id="projects">
@@ -99,8 +219,8 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: jane.doe@example.com</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/janedoe" target="_blank">linkedin.com/in/janedoe</a></p>
+      <p>Email: <a href="mailto:jane.doe@example.com">jane.doe@example.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/janedoe" target="_blank" rel="noopener noreferrer">linkedin.com/in/janedoe</a></p>
     </section>
   </main>
 
