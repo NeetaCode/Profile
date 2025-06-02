@@ -66,28 +66,31 @@
     a:hover {
       text-decoration: underline;
     }
-    .job {
+    .job, .project {
       margin-bottom: 1.5rem;
     }
-    .job-title {
+    .job-title, .project-title {
       font-weight: 700;
       font-size: 1.1rem;
     }
-    .job-company {
+    .job-company, .project-dates {
       font-style: italic;
       color: #555;
     }
-    .job-dates {
+    .job-dates, .project-dates {
       float: right;
       color: #888;
       font-size: 0.9rem;
     }
-    .job-description {
+    .job-description, .project-description {
       margin-top: 0.4rem;
       margin-left: 1rem;
     }
-    .job-description li {
+    .job-description li, .project-description li {
       margin-bottom: 0.4rem;
+    }
+    .clear-fix {
+      clear: both;
     }
     footer {
       text-align: center;
@@ -96,6 +99,17 @@
       color: white;
       margin-top: 3rem;
       clear: both;
+    }
+    .certifications ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      background: none;
+    }
+    .certifications ul li {
+      background: none;
+      margin-bottom: 0.3rem;
+      padding: 0;
+      border-radius: 0;
     }
   </style>
 </head>
@@ -107,6 +121,7 @@
       <a href="#about">About Me</a>
       <a href="#professional">Professional Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -133,6 +148,7 @@
           <span class="job-title">Research Assistant</span>, 
           <span class="job-company">UCCS CS Department, Colorado Springs, CO, USA</span>
           <span class="job-dates">August 2023 – May 2024</span>
+          <div class="clear-fix"></div>
         </div>
         <ul class="job-description">
           <li>Built cloud-native ML pipelines with Python, Docker, Kubernetes, and GCP for real-time and batch data processing, enhancing scalability and speeding insights.</li>
@@ -146,6 +162,7 @@
           <span class="job-title">Network Assistant</span>, 
           <span class="job-company">UCCS OIT, Colorado Springs, CO, USA</span>
           <span class="job-dates">June 2024 – Present</span>
+          <div class="clear-fix"></div>
         </div>
         <ul class="job-description">
           <li>Automated network workflows with Python, cutting manual effort by 40% and boosting engineering efficiency.</li>
@@ -159,6 +176,7 @@
           <span class="job-title">Computer Science Tutor</span>, 
           <span class="job-company">UCCS Maths Centre, Colorado Springs, CO, USA</span>
           <span class="job-dates">August 2023 – Present</span>
+          <div class="clear-fix"></div>
         </div>
         <ul class="job-description">
           <li>Enhanced code quality in Python, Java, and C/C++, increasing project success and reducing debugging time.</li>
@@ -172,6 +190,7 @@
           <span class="job-title">Senior Software Engineer</span>, 
           <span class="job-company">Accolite Digital, Bangalore, India</span>
           <span class="job-dates">August 2021 – January 2023</span>
+          <div class="clear-fix"></div>
         </div>
         <ul class="job-description">
           <li>Developed backend tools and automated test scripts using Python and .NET Core, reducing manual testing by 60% and bugs by 85%, improving product quality and release speed.</li>
@@ -185,6 +204,7 @@
           <span class="job-title">Software Consultant</span>, 
           <span class="job-company">Capgemini, Bangalore, India</span>
           <span class="job-dates">November 2019 – August 2021</span>
+          <div class="clear-fix"></div>
         </div>
         <ul class="job-description">
           <li>Automated backend tasks and data validation with Java, Postman, and Selenium, cutting manual effort and boosting data accuracy and workflow speed.</li>
@@ -198,6 +218,7 @@
           <span class="job-title">Systems Engineer</span>, 
           <span class="job-company">Tata Consultancy Services, Bangalore, India</span>
           <span class="job-dates">June 2015 – November 2019</span>
+          <div class="clear-fix"></div>
         </div>
         <ul class="job-description">
           <li>Automated deployments and system tasks using Jenkins, PowerShell, and Bash, speeding up releases and reducing errors.</li>
@@ -210,10 +231,65 @@
 
     <section id="projects">
       <h2>Projects</h2>
+
+      <div class="project">
+        <div>
+          <span class="project-title">Prompt Engineering for LLMs</span>
+          <span class="project-dates">January 2025 – Present</span>
+          <div class="clear-fix"></div>
+        </div>
+        <ul class="project-description">
+          <li>Improved LLM reasoning and context handling for more accurate, decision-supportive outputs in AI applications.</li>
+          <li>Refined prompt strategies to reduce errors and boost efficiency, accelerating deployment and increasing user trust.</li>
+          <li>Technologies: Semantic parsing, Retrieval-Augmented Generation (RAG), Representation Learning, Large Language Models (LLMs)</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div>
+          <span class="project-title">Accent Identification Model (ANN)</span>
+          <span class="project-dates">May 2023 – January 2024</span>
+          <div class="clear-fix"></div>
+        </div>
+        <ul class="project-description">
+          <li>Enhanced speech recognition accuracy across diverse accents, improving user experience and accessibility.</li>
+          <li>Advanced multimodal AI with inclusive, context-aware models, broadening market reach and boosting customer satisfaction.</li>
+          <li>Technologies: Python, TensorFlow, Scikit-learn, Artificial Neural Networks (ANN)</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div>
+          <span class="project-title">Heart Disease Prediction (Logistic Regression)</span>
+          <span class="project-dates">January 2024 – May 2024</span>
+          <div class="clear-fix"></div>
+        </div>
+        <ul class="project-description">
+          <li>Achieved 85% prediction accuracy to support early diagnosis and data-driven decisions in clinical settings.</li>
+          <li>Showcased predictive modeling’s impact on improving healthcare outcomes and lowering long-term treatment costs.</li>
+          <li>Technologies: Python, Scikit-learn, Logistic Regression, Supervised Learning</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div>
+          <span class="project-title">3D Chromosome Reconstruction (Reinforcement Learning)</span>
+          <span class="project-dates">January 2024 – May 2024</span>
+          <div class="clear-fix"></div>
+        </div>
+        <ul class="project-description">
+          <li>Boosted reconstruction accuracy by 90%, enhancing precision in genomic modeling.</li>
+          <li>Enabled deeper insights into gene interactions and chromosomal behavior, advancing biomedical research and personalized medicine.</li>
+          <li>Technologies: TensorFlow, Reinforcement Learning, Deep Learning, Python, Genomic Data Analysis</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="certifications" class="certifications">
+      <h2>Certifications</h2>
       <ul>
-        <li><strong>Portfolio Website:</strong> A personal site to showcase my work (this one!)</li>
-        <li><strong>Todo App:</strong> A simple task manager built with JavaScript</li>
-        <li><strong>Blog Platform:</strong> A full-stack blog app using Node.js and MongoDB</li>
+        <li>Python for Data Science and AI – Coursera, Aug 2020</li>
+        <li>Overview of Data Visualization – Coursera, Jan 2024</li>
       </ul>
     </section>
 
@@ -221,11 +297,12 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:jane.doe@example.com">jane.doe@example.com</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/janedoe" target="_blank" rel="noopener noreferrer">linkedin.com/in/janedoe</a></p>
+      <p>GitHub: <a href="https://github.com/janedoe" target="_blank" rel="noopener noreferrer">github.com/janedoe</a></p>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Jane Doe
+    <p>© 2025 Jane Doe</p>
   </footer>
 
 </body>
