@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Neeta Kannu - Portfolio</title>
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body class="bg-gray-50 text-gray-800 transition-colors duration-300 flex">
 
   <!-- Sidebar -->
@@ -47,7 +48,7 @@
   <!-- Main Content -->
   <main class="flex-1 ml-64 p-12">
 
-    <!-- Home Section with Typewriter -->
+    <!-- Home Section -->
     <section id="home" class="py-16" data-aos="fade-up">
       <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Home</h2>
       <p class="text-lg max-w-3xl"><span id="typewriter" class="font-medium text-gray-800"></span></p>
@@ -92,6 +93,8 @@
         </div>
       </div>
     </section>
+
+    
 
     <!-- Experience Section as Timeline -->
     <section id="experience" class="py-16 relative" data-aos="fade-up">
@@ -236,23 +239,67 @@
       </div>
     </section>
 
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Certifications</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Python for Data Science and AI – Coursera, Aug 2020</li>
+        <li>Overview of Data Visualization – Coursera, Jan 2024</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Contact</h2>
+      <p class="flex items-center gap-4 text-2xl">
+        <a href="mailto:neetatechy@gmail.com" class="text-blue-600 hover:text-blue-800 transition"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/neeta-kannu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/NeetaCode" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-gray-600 transition"><i class="fab fa-github"></i></a>
+        <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition"><i class="fas fa-file-lines"></i></a>
+      </p>
+      <p class="mt-6 flex gap-4">
+        <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg shadow hover:opacity-90 transition">View Resume</a>
+        <a href="Resume_Neeta_Kannu.pdf" download class="bg-gray-700 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-800 transition">Download Resume</a>
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center py-6 text-gray-400 bg-gray-900 rounded-lg">
+      © 2025 Neeta Kannu
+    </footer>
   </main>
 
+  <!-- Scripts -->
   <script>
-    // Typewriter effect
-    const typewriterText = "Hello! I'm Neeta Kannu, ML Engineer and Software Developer.";
-    let i = 0;
-    function typeWriter() {
-      if (i < typewriterText.length) {
-        document.getElementById("typewriter").innerHTML += typewriterText.charAt(i);
-        i++;
-        setTimeout(typeWriter, 50);
-      }
-    }
-    typeWriter();
+    // Scroll to top on refresh
+    window.onbeforeunload = () => window.scrollTo(0,0);
 
     // Initialize AOS
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 1000, once: true });
+
+    // Typewriter effect
+    const typewriterElement = document.getElementById('typewriter');
+    const words = ["Welcome to my portfolio! I’m Neeta Kannu, an ML Engineer and Software Developer specializing in cloud-native systems, machine learning, and scalable solutions."];
+    let wordIndex = 0, charIndex = 0;
+
+    function typeWord() {
+      if (charIndex < words[wordIndex].length) {
+        typewriterElement.textContent += words[wordIndex][charIndex++];
+        setTimeout(typeWord, 50);
+      } else setTimeout(deleteWord, 1500);
+    }
+    function deleteWord() {
+      if (charIndex > 0) {
+        typewriterElement.textContent = words[wordIndex].substring(0, --charIndex);
+        setTimeout(deleteWord, 25);
+      } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeWord, 500);
+      }
+    }
+    typeWord();
   </script>
+
 </body>
 </html>
