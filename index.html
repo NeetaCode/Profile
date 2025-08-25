@@ -1,112 +1,76 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Neeta Kannu - Portfolio</title>
-
-  <!-- Tailwind CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+<body class="bg-gray-50 text-gray-900">
 
-<body class="bg-gray-50 text-gray-800 transition-colors duration-300 flex">
-
-  <!-- Sidebar -->
-  <aside class="w-64 bg-gradient-to-b from-blue-600 to-purple-600 text-white fixed flex flex-col items-center p-6 h-full overflow-y-auto">
-    <img src="https://raw.githubusercontent.com/NeetaCode/Profile/main/Profile_%20Pic.jpg" 
-         alt="Neeta Kannu" class="w-32 h-32 rounded-full border-4 border-white shadow-lg mb-6 object-cover">
-
-    <h1 class="text-2xl font-bold mb-6 text-center">Neeta Kannu</h1>
-
-    <!-- Contact & Resume Icons -->
-    <div class="flex space-x-4 mt-8 text-2xl">
-      <a href="mailto:neetatechy@gmail.com" class="hover:text-yellow-300 transition"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/neeta-kannu/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/NeetaCode" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition"><i class="fab fa-github"></i></a>
-      <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition"><i class="fas fa-file-lines"></i></a>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-blue-600">My Portfolio</h1>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#education" class="hover:text-blue-600">Education</a>
+        <a href="#experience" class="hover:text-blue-600">Experience</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Navigation -->
-    <nav class="flex flex-col space-y-4 text-lg font-medium w-full mt-8">
-      <a href="#home" class="hover:text-yellow-300 transition text-center">Home</a>
-      <a href="#about" class="hover:text-yellow-300 transition text-center">About</a>
-      <a href="#education" class="hover:text-yellow-300 transition text-center">Education</a>
-      <a href="#experience" class="hover:text-yellow-300 transition text-center">Experience</a>
-      <a href="#projects" class="hover:text-yellow-300 transition text-center">Projects</a>
-      <a href="#certifications" class="hover:text-yellow-300 transition text-center">Certifications</a>
-      <a href="#contact" class="hover:text-yellow-300 transition text-center">Contact</a>
-    </nav>
-  </aside>
+  <main class="max-w-5xl mx-auto px-6 py-12">
 
-  <!-- Main Content -->
-  <main class="flex-1 ml-64 p-12">
-
-    <!-- Home Section -->
-    <section id="home" class="py-16" data-aos="fade-up">
-      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Home</h2>
-      <p class="text-lg max-w-3xl"><span id="typewriter" class="font-medium text-gray-800"></span></p>
+    <!-- About -->
+    <section id="about" class="mb-16">
+      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">About Me</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Passionate systems engineer and researcher with hands-on experience in machine learning,
+        cloud-native solutions, and network engineering. Skilled at building scalable systems,
+        automating workflows, and delivering efficient technical solutions.
+      </p>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-16" data-aos="fade-up">
-      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-10">About Me</h2>
-      <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
-        <div class="flex-shrink-0">
-          <img src="https://raw.githubusercontent.com/NeetaCode/Profile/main/Profile_%20Pic.jpg" 
-               alt="Neeta Kannu" class="w-48 h-48 rounded-xl shadow-lg object-cover">
+    <!-- Education -->
+    <section id="education" class="mb-16">
+      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">Education</h2>
+      <div class="relative border-l-4 border-blue-500 ml-2 pl-12">
+
+        <!-- UCCS -->
+        <div class="mb-10 relative">
+          <span class="absolute -left-[14px] top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
+          <h3 class="text-xl font-semibold">
+            Master of Science, Computer Science, 
+            <a href="https://www.uccs.edu" class="text-blue-600 hover:underline" target="_blank">University of Colorado Colorado Springs</a>
+          </h3>
+          <p class="text-sm text-gray-500">Aug 2022 – May 2024</p>
         </div>
-        <div class="flex-1 space-y-6">
-          <p class="text-lg leading-relaxed">
-            ML Engineer with 8+ years of experience in software engineering, applied ML, and 
-            <span class="font-semibold text-blue-600">Go-based cloud-native development</span>. Skilled in building distributed 
-            systems, microservices (Go, gRPC, GraphQL), and deploying ML pipelines at scale on Kubernetes. 
-            Hands-on with LLMs, NLP, multimodal AI, and MLOps stacks (MLflow, Kubeflow, Weights & Biases).
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 text-gray-700 text-lg">
-            <div><span class="font-semibold">Major:</span> Machine Learning / Software Engineering</div>
-            <div><span class="font-semibold">Graduation Date:</span> December 2025</div>
-            <div><span class="font-semibold">School:</span> University of Colorado Colorado Springs</div>
-            <div><span class="font-semibold">Email:</span> <a href="mailto:neetatechy@gmail.com" class="text-blue-600 hover:underline">neetatechy@gmail.com</a></div>
-            <div><span class="font-semibold">City:</span> Colorado Springs, CO</div>
-            <div><span class="font-semibold">Open for relocation:</span> Anywhere in US</div>
-            <div><span class="font-semibold">Start Date:</span> ASAP</div>
-          </div>
+
+        <!-- VTU -->
+        <div class="mb-10 relative">
+          <span class="absolute -left-[14px] top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
+          <h3 class="text-xl font-semibold">
+            Bachelor of Engineering, Information Science, 
+            <a href="https://vtu.ac.in" class="text-blue-600 hover:underline" target="_blank">Visvesvaraya Technological University</a>
+          </h3>
+          <p class="text-sm text-gray-500">Aug 2016 – Jul 2020</p>
         </div>
+
       </div>
     </section>
 
-    <!-- Education Section -->
-      <section id="education" class="py-16" data-aos="fade-up">
-        <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Education</h2>
-        <div class="grid gap-6">
-          <div class="bg-white shadow-lg rounded-xl p-6">
-            <h3 class="font-bold text-xl">University of Colorado Colorado Springs</h3>
-            <p class="text-gray-500">Graduation: December 2025</p>
-            <p class="mt-2">Degree: Masters in computer science</p>
-            <p class="mt-2">Major: Machine Learning / Software Engineering</p>
-          </div>
-        </div>
-      </section>
+    <!-- Professional Experience -->
+    <section id="experience" class="mb-16">
+      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">Professional Experience</h2>
+      <div class="relative border-l-4 border-blue-500 ml-2 pl-12">
 
-    <!-- Professional Experience Section -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-1 mb-8">Professional Experience</h2>
-
-      <!-- Timeline container -->
-      <div class="relative border-l-4 border-blue-500 ml-2 pl-8">
-
-      <!-- Research Assistant -->
+        <!-- Research Assistant -->
         <div class="mb-10 relative">
-          <!-- Timeline dot -->
           <span class="absolute -left-[14px] top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-
           <h3 class="text-xl font-semibold">
             Research Assistant, 
             <a href="https://www.uccs.edu/engineering" target="_blank" class="text-blue-600 hover:underline">
@@ -123,9 +87,7 @@
 
         <!-- Network Assistant -->
         <div class="mb-10 relative">
-          <!-- Timeline dot -->
           <span class="absolute -left-[14px] top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-
           <h3 class="text-xl font-semibold">
             Network Assistant, 
             <a href="https://www.uccs.edu/oit" target="_blank" class="text-blue-600 hover:underline">UCCS OIT</a>, 
@@ -140,9 +102,7 @@
 
         <!-- Systems Engineer -->
         <div class="mb-10 relative">
-          <!-- Timeline dot -->
           <span class="absolute -left-[14px] top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-
           <h3 class="text-xl font-semibold">
             Systems Engineer, 
             <a href="https://www.tcs.com/" target="_blank" class="text-blue-600 hover:underline">Tata Consultancy Services</a>, 
@@ -159,126 +119,52 @@
       </div>
     </section>
 
-
-
-
-    
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 relative" data-aos="fade-up">
-      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-12">Projects</h2>
-
-      <div class="relative border-l-4 border-blue-500 ml-6">
-
-        <!-- Prompt Engineering for LLMs -->
-        <div class="mb-10 relative">
-          <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-          <h3 class="text-xl font-semibold">Prompt Engineering for LLMs</h3>
-          <p class="text-sm text-gray-500 mb-2">Jan 2025 – Present</p>
-          <ul class="list-disc list-outside pl-6 text-gray-700 mt-2 space-y-2">
-            <li>Enhanced LLM accuracy by 35% on GSM8K, SVAMP, and MAWPS using prompt engineering, reducing hallucinations.</li>
-            <li>Increased retrieval relevance by 22% by integrating semantic search in RAG pipelines for faster, more accurate enterprise responses.</li>
-            <li>Led fine-tuning of LLaMA/ChatGPT-3.5 on GPU-optimized GCP, reducing inference costs by 20% while maintaining performance.</li>
-          </ul>
-        </div>
-
-        <!-- Accent Identification Model (ANN) -->
-        <div class="mb-10 relative">
-          <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-          <h3 class="text-xl font-semibold">Accent Identification Model (ANN)</h3>
-          <p class="text-sm text-gray-500 mb-2">May 2023 – Jan 2024</p>
-          <ul class="list-disc list-outside pl-6 text-gray-700 mt-2 space-y-2">
-            <li>Constructed a multilingual accent classifier (Speech Accent Archive), boosting ASR accuracy by 20% and expanding global coverage.</li>
-            <li>Engineered audio-text fusion preprocessing, cutting misclassifications and improving model generalization across diverse accents.</li>
-            <li>Scaled ML experiments on GCP, implementing reproducible workflows with Weights & Biases (W&B) to accelerate model deployment.</li>
-            <li>Owned implementation of PyTorch, TensorFlow, Hugging Face to deliver high-performance, production-ready speech models.</li>
-          </ul>
-        </div>
-
-        <!-- Heart Disease Prediction -->
-        <div class="mb-10 relative">
-          <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-          <h3 class="text-xl font-semibold">Heart Disease Prediction</h3>
-          <p class="text-sm text-gray-500 mb-2">Jan 2024 – May 2024</p>
-          <ul class="list-disc list-outside pl-6 text-gray-700 mt-2 space-y-2">
-            <li>Produced SVM and Logistic Regression models on Cleveland dataset, achieving 85% accuracy for early cardiac risk, enabling faster care.</li>
-            <li>Applied PCA for dimensionality reduction, accelerating model inference by 30% and improving deployment efficiency.</li>
-            <li>Deployed models on GCP using Docker containers, facilitating faster iterations and reliable deployments.</li>
-            <li>Leveraged Python, Scikit-learn, PCA, Docker, and GCP to build production-ready, high-impact healthcare AI solutions.</li>
-          </ul>
-        </div>
-
-        <!-- 3D Chromosome Reconstruction (RL) -->
-        <div class="mb-10 relative">
-          <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-          <h3 class="text-xl font-semibold">3D Chromosome Reconstruction (RL)</h3>
-          <p class="text-sm text-gray-500 mb-2">Jan 2024 – May 2024</p>
-          <ul class="list-disc list-outside pl-6 text-gray-700 mt-2 space-y-2">
-            <li>Implemented Python, TensorFlow, CUDA, Docker, and HPC to build high-performance, reproducible genomics AI workflows.</li>
-            <li>Designed 3D chromosome folding simulation using Reinforcement Learning on Hi-C data, improving spatial prediction.</li>
-            <li>Reduced training cycles 40% via CUDA parallelization and scalable container orchestration on HPC clusters, speeding experimentation.</li>
-          </ul>
-        </div>
-
+    <!-- Skills -->
+    <section id="skills" class="mb-16">
+      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 text-gray-700">
+        <div><strong>Languages:</strong> Python, C, JavaScript, SQL</div>
+        <div><strong>Frameworks:</strong> FastAPI, Flask, Node.js</div>
+        <div><strong>Cloud:</strong> AWS, GCP</div>
+        <div><strong>Databases:</strong> MySQL, PostgreSQL</div>
+        <div><strong>DevOps:</strong> Docker, Kubernetes, Jenkins</div>
+        <div><strong>Tools:</strong> Git, Linux, SolarWinds, ClearPass</div>
       </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="py-16" data-aos="fade-up">
-      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Certifications</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li>Python for Data Science and AI – Coursera, Aug 2020</li>
-        <li>Overview of Data Visualization – Coursera, Jan 2024</li>
-      </ul>
+    <!-- Projects -->
+    <section id="projects" class="mb-16">
+      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white shadow p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Genomic ML Pipeline</h3>
+          <p class="text-gray-700">Built an end-to-end ML pipeline on GCP for large genomic datasets, reducing preprocessing time by 50%.</p>
+        </div>
+        <div class="bg-white shadow p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Network Automation</h3>
+          <p class="text-gray-700">Developed Python scripts to automate network provisioning and monitoring, improving system uptime.</p>
+        </div>
+        <div class="bg-white shadow p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Microservices Platform</h3>
+          <p class="text-gray-700">Engineered Python-based microservices for e-commerce applications, enabling 35% faster API responses.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16" data-aos="fade-up">
-      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Contact</h2>
-      <p class="flex items-center gap-4 text-2xl">
-        <a href="mailto:neetatechy@gmail.com" class="text-blue-600 hover:text-blue-800 transition"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/neeta-kannu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/NeetaCode" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-gray-600 transition"><i class="fab fa-github"></i></a>
-        <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition"><i class="fas fa-file-lines"></i></a>
-      </p>
-      <p class="mt-6 flex gap-4">
-        <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg shadow hover:opacity-90 transition">View Resume</a>
-        <a href="Resume_Neeta_Kannu.pdf" download class="bg-gray-700 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-800 transition">Download Resume</a>
-      </p>
+    <!-- Contact -->
+    <section id="contact" class="mb-16">
+      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">Contact</h2>
+      <p class="text-lg text-gray-700">Email: <a href="mailto:yourname@email.com" class="text-blue-600 hover:underline">yourname@email.com</a></p>
+      <p class="text-lg text-gray-700">LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/yourprofile</a></p>
+      <p class="text-lg text-gray-700">GitHub: <a href="https://github.com/yourgithub" target="_blank" class="text-blue-600 hover:underline">github.com/yourgithub</a></p>
     </section>
 
-    <!-- Footer -->
-    <footer class="mt-12 text-center py-6 text-gray-400 bg-gray-900 rounded-lg">
-      © 2025 Neeta Kannu
-    </footer>
   </main>
 
-  <!-- Scripts -->
-  <script>
-    window.onbeforeunload = () => window.scrollTo(0,0);
-    AOS.init({ duration: 1000, once: true });
-
-    const typewriterElement = document.getElementById('typewriter');
-    const words = ["Welcome to my portfolio! I’m Neeta Kannu, an ML Engineer and Software Developer specializing in cloud-native systems, machine learning, and scalable solutions."];
-    let wordIndex = 0, charIndex = 0;
-
-    function typeWord() {
-      if (charIndex < words[wordIndex].length) {
-        typewriterElement.textContent += words[wordIndex][charIndex++];
-        setTimeout(typeWord, 50);
-      } else setTimeout(deleteWord, 1500);
-    }
-    function deleteWord() {
-      if (charIndex > 0) {
-        typewriterElement.textContent = words[wordIndex].substring(0, --charIndex);
-        setTimeout(deleteWord, 25);
-      } else {
-        wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(typeWord, 500);
-      }
-    }
-    typeWord();
-  </script>
+  <!-- Footer -->
+  <footer class="bg-white border-t text-center py-4">
+    <p class="text-gray-500 text-sm">© 2025 My Portfolio. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
