@@ -15,7 +15,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300 flex">
+<body class="bg-gray-50 text-gray-800 transition-colors duration-300 flex">
 
   <!-- Sidebar -->
   <aside class="w-64 bg-gradient-to-b from-blue-600 to-purple-600 text-white h-screen fixed flex flex-col items-center p-8">
@@ -25,7 +25,19 @@
 
     <!-- Name -->
     <h1 class="text-2xl font-bold mb-6 text-center">Neeta Kannu</h1>
-    <!-- Contact Icons -->
+
+    <!-- Navigation -->
+    <nav class="flex flex-col space-y-4 text-lg font-medium w-full">
+      <a href="#home" class="hover:text-yellow-300 transition text-center">Home</a>
+      <a href="#about" class="hover:text-yellow-300 transition text-center">About</a>
+      <a href="#education" class="hover:text-yellow-300 transition text-center">Education</a>
+      <a href="#experience" class="hover:text-yellow-300 transition text-center">Experience</a>
+      <a href="#projects" class="hover:text-yellow-300 transition text-center">Projects</a>
+      <a href="#certifications" class="hover:text-yellow-300 transition text-center">Certifications</a>
+      <a href="#contact" class="hover:text-yellow-300 transition text-center">Contact</a>
+    </nav>
+
+    <!-- Contact & Resume Icons -->
     <div class="flex space-x-4 mt-8 text-2xl">
       <a href="mailto:neetatechy@gmail.com" class="hover:text-yellow-300 transition">
         <i class="fas fa-envelope"></i>
@@ -38,90 +50,97 @@
          class="hover:text-yellow-300 transition">
         <i class="fab fa-github"></i>
       </a>
-        <!-- Resume PDF -->
       <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer"
          class="hover:text-yellow-300 transition">
         <i class="fas fa-file-pdf"></i>
       </a>
     </div>
-
-    <!-- Navigation -->
-    <nav class="flex flex-col space-y-4 text-lg font-medium w-full">
-      <a href="#about" class="hover:text-yellow-300 transition text-center">About</a>
-      <a href="#experience" class="hover:text-yellow-300 transition text-center">Experience</a>
-      <a href="#projects" class="hover:text-yellow-300 transition text-center">Projects</a>
-      <a href="#certifications" class="hover:text-yellow-300 transition text-center">Certifications</a>
-<!--       <a href="#contact" class="hover:text-yellow-300 transition text-center">Contact</a> -->
-    </nav>
-
-    
-
-    <!-- Dark Mode Toggle -->
-    <button id="theme-toggle" class="mt-auto p-2 rounded-full bg-white/20 hover:bg-white/30 transition text-xl">
-      🌙
-    </button>
   </aside>
 
   <!-- Main Content -->
   <main class="flex-1 ml-64 p-12">
-    
+
+    <!-- Home Section -->
+    <section id="home" class="py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Home</h2>
+      <p class="text-lg max-w-3xl">
+        Welcome to my portfolio! I’m Neeta Kannu, an ML Engineer and Software Developer specializing in cloud-native systems, machine learning, and scalable solutions.
+      </p>
+    </section>
+
     <!-- About Section -->
-	<section id="about" class="py-16" data-aos="fade-up">
-		<h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-10">About Me</h2>
-  
-		<div class="flex flex-col md:flex-row items-center md:items-start gap-10">
-    
-		<!-- Left: Picture -->
-		<div class="flex-shrink-0">
-		<img src="https://raw.githubusercontent.com/NeetaCode/Profile/main/Profile_%20Pic.jpg" 
-			alt="Neeta Kannu" 
-			class="w-48 h-48 rounded-xl shadow-lg object-cover">
-		</div>
-    
-		<!-- Right: Summary & Details -->
-		<div class="flex-1 space-y-6">
-		<!-- Quick Summary -->
-			<p class="text-lg leading-relaxed">
-				ML Engineer with 8+ years of experience in software engineering, applied ML, and 
-				<span class="font-semibold text-blue-600 dark:text-yellow-400">Go-based cloud-native development</span>. Skilled in building distributed 
-				systems, microservices (Go, gRPC, GraphQL), and deploying ML pipelines at scale on Kubernetes. 
-				Hands-on with LLMs, NLP, multimodal AI, and MLOps stacks (MLflow, Kubeflow, Weights & Biases).
-			</p>
+    <section id="about" class="py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-10">About Me</h2>
       
-			<!-- Structured Info -->
-			<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 text-gray-700 dark:text-gray-300 text-lg">
-				<div><span class="font-semibold">Major:</span> Machine Learning / Software Engineering</div>
-				<div><span class="font-semibold">Graduation Date:</span> May 2024</div>
-				<div><span class="font-semibold">School:</span> University of Colorado Colorado Springs</div>
-				<div><span class="font-semibold">Email:</span> <a href="mailto:neetatechy@gmail.com" class="text-blue-600 dark:text-yellow-400 hover:underline">neetatechy@gmail.com</a></div>
-				<div><span class="font-semibold">City:</span> Colorado Springs, CO</div>
-				<div><span class="font-semibold">Open for relocation:</span> Anywhere in US</div>
-				<div><span class="font-semibold">Start Date:</span> ASAP</div>
-			</div>
-		</div>
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+        <!-- Left: Picture -->
+        <div class="flex-shrink-0">
+          <img src="https://raw.githubusercontent.com/NeetaCode/Profile/main/Profile_%20Pic.jpg" 
+               alt="Neeta Kannu" 
+               class="w-48 h-48 rounded-xl shadow-lg object-cover">
+        </div>
+        
+        <!-- Right: Summary & Details -->
+        <div class="flex-1 space-y-6">
+          <!-- Quick Summary -->
+          <p class="text-lg leading-relaxed">
+            ML Engineer with 8+ years of experience in software engineering, applied ML, and 
+            <span class="font-semibold text-blue-600">Go-based cloud-native development</span>. Skilled in building distributed 
+            systems, microservices (Go, gRPC, GraphQL), and deploying ML pipelines at scale on Kubernetes. 
+            Hands-on with LLMs, NLP, multimodal AI, and MLOps stacks (MLflow, Kubeflow, Weights & Biases).
+          </p>
+          
+          <!-- Structured Info -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 text-gray-700 text-lg">
+            <div><span class="font-semibold">Major:</span> Machine Learning / Software Engineering</div>
+            <div><span class="font-semibold">Graduation Date:</span> May 2024</div>
+            <div><span class="font-semibold">School:</span> University of Colorado Colorado Springs</div>
+            <div><span class="font-semibold">Email:</span> <a href="mailto:neetatechy@gmail.com" class="text-blue-600 hover:underline">neetatechy@gmail.com</a></div>
+            <div><span class="font-semibold">City:</span> Colorado Springs, CO</div>
+            <div><span class="font-semibold">Open for relocation:</span> Anywhere in US</div>
+            <div><span class="font-semibold">Start Date:</span> ASAP</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </div>
-</section>
-
+    <!-- Education Section -->
+    <section id="education" class="py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Education</h2>
+      <div class="grid gap-6">
+        <div class="bg-white shadow-lg rounded-xl p-6">
+          <h3 class="font-bold text-xl">University of Colorado Colorado Springs</h3>
+          <p class="text-gray-500">Graduation: May 2024</p>
+          <p class="mt-2">Major: Machine Learning / Software Engineering</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl p-6">
+          <h3 class="font-bold text-xl">Other Certifications & Courses</h3>
+          <ul class="list-disc list-inside mt-2 text-gray-700">
+            <li>Python for Data Science and AI – Coursera</li>
+            <li>Overview of Data Visualization – Coursera</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <!-- Experience Section -->
     <section id="experience" class="py-16" data-aos="fade-up">
       <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Professional Experience</h2>
       <div class="grid gap-8 md:grid-cols-2">
-        <div class="bg-white dark:bg-gray-800 shadow-xl rounded-xl p-6 transform hover:-translate-y-2 transition" data-aos="zoom-in">
+        <div class="bg-white shadow-xl rounded-xl p-6 transform hover:-translate-y-2 transition" data-aos="zoom-in">
           <h3 class="font-bold text-xl">Research Assistant @ UCCS</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400">Aug 2023 – May 2024</p>
+          <p class="text-sm text-gray-500">Aug 2023 – May 2024</p>
           <ul class="list-disc list-inside mt-3 space-y-2">
-            <li>Built <strong>Go + Python ML pipelines</strong> with Docker, K8s, and GCP.</li>
+            <li>Built Go + Python ML pipelines with Docker, Kubernetes, and GCP.</li>
             <li>Optimized inference with gRPC microservices, reducing latency by 25%.</li>
             <li>Implemented observability with Prometheus and Grafana.</li>
           </ul>
         </div>
-        <div class="bg-white dark:bg-gray-800 shadow-xl rounded-xl p-6 transform hover:-translate-y-2 transition" data-aos="zoom-in">
+        <div class="bg-white shadow-xl rounded-xl p-6 transform hover:-translate-y-2 transition" data-aos="zoom-in">
           <h3 class="font-bold text-xl">Senior Software Engineer @ Accolite</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400">Aug 2021 – Jan 2023</p>
+          <p class="text-sm text-gray-500">Aug 2021 – Jan 2023</p>
           <ul class="list-disc list-inside mt-3 space-y-2">
-            <li>Developed <strong>Go-based backend APIs</strong> serving millions of requests daily.</li>
+            <li>Developed Go-based backend APIs serving millions of requests daily.</li>
             <li>Scaled systems with Kafka + Redis for event-driven architecture.</li>
             <li>Deployed services via GitHub Actions + ArgoCD with 99.99% uptime.</li>
           </ul>
@@ -130,21 +149,21 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-gray-100 dark:bg-gray-800/40 rounded-xl" data-aos="fade-up">
+    <section id="projects" class="py-16 bg-gray-100 rounded-xl" data-aos="fade-up">
       <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Projects</h2>
       <div class="grid gap-8 md:grid-cols-2">
-        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 hover:shadow-2xl transition" data-aos="flip-left">
+        <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition" data-aos="flip-left">
           <h3 class="font-bold text-lg">Prompt Engineering for LLMs</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400">2025</p>
+          <p class="text-sm text-gray-500">2025</p>
           <ul class="list-disc list-inside mt-3 space-y-2">
             <li>Deployed RAG chatbot using Go services + Python ML.</li>
             <li>Integrated Pinecone for semantic search.</li>
             <li>Optimized cost with LoRA fine-tuning.</li>
           </ul>
         </div>
-        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 hover:shadow-2xl transition" data-aos="flip-right">
+        <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition" data-aos="flip-right">
           <h3 class="font-bold text-lg">Accent Identification Model</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400">2023</p>
+          <p class="text-sm text-gray-500">2023</p>
           <ul class="list-disc list-inside mt-3 space-y-2">
             <li>Built multimodal pipeline deployed as a Go microservice.</li>
             <li>Improved recognition accuracy across accents by 20%.</li>
@@ -164,19 +183,23 @@
     </section>
 
     <!-- Contact Section -->
-<!--     <section id="contact" class="py-16" data-aos="fade-up">
+    <section id="contact" class="py-16" data-aos="fade-up">
       <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Contact</h2>
       <p class="flex items-center gap-4 text-2xl">
-        <a href="mailto:neetatechy@gmail.com" class="text-blue-600 dark:text-yellow-400 hover:text-blue-800 dark:hover:text-yellow-300 transition">
+        <a href="mailto:neetatechy@gmail.com" class="text-blue-600 hover:text-blue-800 transition">
           <i class="fas fa-envelope"></i>
         </a>
         <a href="https://www.linkedin.com/in/neeta-kannu/" target="_blank" rel="noopener noreferrer"
-           class="text-blue-600 dark:text-yellow-400 hover:text-blue-800 dark:hover:text-yellow-300 transition">
+           class="text-blue-600 hover:text-blue-800 transition">
           <i class="fab fa-linkedin"></i>
         </a>
         <a href="https://github.com/NeetaCode" target="_blank" rel="noopener noreferrer"
-           class="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 transition">
+           class="text-gray-800 hover:text-gray-600 transition">
           <i class="fab fa-github"></i>
+        </a>
+        <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer"
+           class="hover:text-red-600 transition">
+          <i class="fas fa-file-pdf"></i>
         </a>
       </p>
       <p class="mt-6 flex gap-4">
@@ -189,10 +212,10 @@
           Download Resume
         </a>
       </p>
-    </section> -->
+    </section>
 
     <!-- Footer -->
-    <footer class="mt-12 text-center py-6 text-gray-400 bg-gray-900 dark:bg-gray-800 rounded-lg">
+    <footer class="mt-12 text-center py-6 text-gray-400 bg-gray-900 rounded-lg">
       © 2025 Neeta Kannu
     </footer>
 
@@ -202,13 +225,6 @@
   <script>
     // Initialize AOS animations
     AOS.init({ duration: 1000, once: true });
-
-    // Dark mode toggle
-    const toggle = document.getElementById("theme-toggle");
-    toggle.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-      toggle.textContent = document.documentElement.classList.contains("dark") ? "☀️" : "🌙";
-    });
   </script>
 </body>
 </html>
