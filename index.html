@@ -1,319 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Neeta Kannu - Portfolio</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #0077cc;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    nav {
-      margin-top: 0.5rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 600;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      border-bottom: 2px solid #0077cc;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      background: #e3f2fd;
-      margin-bottom: 0.5rem;
-      padding: 0.7rem 1rem;
-      border-radius: 4px;
-    }
-    a {
-      color: #0077cc;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .job, .project {
-      margin-bottom: 1.5rem;
-    }
-    .job-title, .project-title {
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-    .job-company, .project-dates {
-      font-style: italic;
-      color: #555;
-    }
-    .job-dates, .project-dates {
-      float: right;
-      color: #888;
-      font-size: 0.9rem;
-    }
-    .job-description, .project-description {
-      margin-top: 0.4rem;
-      margin-left: 1rem;
-    }
-    .job-description li, .project-description li {
-      margin-bottom: 0.4rem;
-    }
-    .clear-fix {
-      clear: both;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #222;
-      color: white;
-      margin-top: 3rem;
-      clear: both;
-    }
-    .certifications ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-      background: none;
-    }
-    .certifications ul li {
-      background: none;
-      margin-bottom: 0.3rem;
-      padding: 0;
-      border-radius: 0;
-    }
-  </style>
-</head>
-<body>
+// app/page.tsx (Next.js 13+ with Tailwind, shadcn/ui, and Framer Motion)
 
-  <header>
-    <h1>Neeta Kannu</h1>
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#professional">Professional Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        ML Engineer with 8+ years of experience in software engineering, applied machine learning, and scalable cloud-native development across the U.S. and India. Skilled in developing and deploying deep learning and reinforcement learning models using Python, TensorFlow, PyTorch, Scikit-learn, and MLflow.
-      </p>
-      <p>
-        Hands-on experience with natural language processing (NLP), prompt engineering, and large language models (LLMs), including fine-tuning and inference with Hugging Face Transformers. Proficient in building end-to-end pipelines for both structured and unstructured data, with expertise in GCP, Azure, Docker, and Kubernetes (AKS).
-      </p>
-      <p>
-        Demonstrated success in applying machine learning for real-world use cases in conversational AI, multimodal applications, and on-device optimization. Strong collaborator with a background in cross-disciplinary research, technical mentorship, and clear communication of complex AI concepts.
-      </p>
-    </section>
-
-    <section id="professional">
-      <h2>Professional Experience</h2>
-
-      <div class="job">
-        <div>
-          <span class="job-title">Research Assistant</span>, 
-          <span class="job-company">UCCS CS Department, Colorado Springs, CO, USA</span>
-          <span class="job-dates">August 2023 – May 2024</span>
-          <div class="clear-fix"></div>
+export default function Portfolio() {
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-100">
+      {/* Header */}
+      <header className="bg-blue-600 text-white py-6 shadow-md">
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl font-bold">Neeta Kannu</h1>
+          <nav className="mt-2 space-x-6">
+            <Link href="#about" className="hover:underline">About</Link>
+            <Link href="#experience" className="hover:underline">Experience</Link>
+            <Link href="#projects" className="hover:underline">Projects</Link>
+            <Link href="#certifications" className="hover:underline">Certifications</Link>
+            <Link href="#contact" className="hover:underline">Contact</Link>
+          </nav>
         </div>
-        <ul class="job-description">
-          <li>Built cloud-native ML pipelines with Python, Docker, Kubernetes, and GCP for real-time and batch data processing, enhancing scalability and speeding insights.</li>
-          <li>Optimized AI/ML text analytics models, boosting customer insights and pipeline efficiency by 25%, lowering cloud and labor costs.</li>
-          <li>Developed interactive visualizations and fostered cross-team collaboration to accelerate AI solution delivery and adoption.</li>
-        </ul>
-      </div>
+      </header>
 
-      <div class="job">
-        <div>
-          <span class="job-title">Network Assistant</span>, 
-          <span class="job-company">UCCS OIT, Colorado Springs, CO, USA</span>
-          <span class="job-dates">June 2024 – Present</span>
-          <div class="clear-fix"></div>
+      {/* About Section */}
+      <section id="about" className="container mx-auto py-12 px-4">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          className="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6"
+        >
+          About Me
+        </motion.h2>
+        <p className="max-w-3xl text-lg leading-relaxed">
+          ML Engineer with 8+ years of experience in software engineering, applied ML, and scalable 
+          <span className="font-semibold"> Go-based cloud-native development</span>. Skilled in building 
+          distributed systems, microservices (Go, gRPC, REST, GraphQL), and deploying ML pipelines at scale 
+          on Kubernetes. Hands-on with LLMs, NLP, multimodal AI, and MLOps stacks (MLflow, Kubeflow, Weights & Biases).
+        </p>
+      </section>
+
+      {/* Professional Experience */}
+      <section id="experience" className="container mx-auto py-12 px-4">
+        <h2 className="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6">
+          Professional Experience
+        </h2>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card className="shadow-lg">
+            <CardContent className="p-6">
+              <h3 className="font-bold text-lg">Research Assistant @ UCCS</h3>
+              <p className="text-sm text-gray-500">Aug 2023 – May 2024</p>
+              <ul className="list-disc list-inside mt-3 space-y-2">
+                <li>Built <strong>Go + Python ML pipelines</strong> with Docker, K8s, and GCP.</li>
+                <li>Optimized inference with gRPC microservices, cutting latency by 25%.</li>
+                <li>Implemented observability (Prometheus, Grafana, OpenTelemetry) to monitor AI services.</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-lg">
+            <CardContent className="p-6">
+              <h3 className="font-bold text-lg">Senior Software Engineer @ Accolite</h3>
+              <p className="text-sm text-gray-500">Aug 2021 – Jan 2023</p>
+              <ul className="list-disc list-inside mt-3 space-y-2">
+                <li>Developed <strong>Go-based backend APIs</strong> serving millions of requests daily.</li>
+                <li>Scaled systems with <strong>Kafka + Redis</strong> for event-driven architecture.</li>
+                <li>Deployed services via ArgoCD and GitHub Actions with 99.99% uptime.</li>
+              </ul>
+            </CardContent>
+          </Card>
         </div>
-        <ul class="job-description">
-          <li>Automated network workflows with Python, cutting manual effort by 40% and boosting engineering efficiency.</li>
-          <li>Managed Linux and Windows systems to optimize model hosting and monitoring, accelerating deployment cycles.</li>
-          <li>Improved infrastructure reliability through scalable setups and enhanced performance monitoring, reducing downtime and smooth operations.</li>
-        </ul>
-      </div>
+      </section>
 
-      <div class="job">
-        <div>
-          <span class="job-title">Computer Science Tutor</span>, 
-          <span class="job-company">UCCS Maths Centre, Colorado Springs, CO, USA</span>
-          <span class="job-dates">August 2023 – Present</span>
-          <div class="clear-fix"></div>
+      {/* Projects */}
+      <section id="projects" className="container mx-auto py-12 px-4">
+        <h2 className="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6">
+          Projects
+        </h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card className="shadow-lg">
+            <CardContent className="p-6">
+              <h3 className="font-bold">Prompt Engineering for LLMs</h3>
+              <p className="text-sm text-gray-500">2025</p>
+              <ul className="list-disc list-inside mt-3 space-y-2">
+                <li>Deployed RAG-based chatbot using Go microservices + Python ML.</li>
+                <li>Integrated Pinecone vector DB for semantic search.</li>
+                <li>Optimized cost via LoRA fine-tuning with Hugging Face + PEFT.</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-lg">
+            <CardContent className="p-6">
+              <h3 className="font-bold">Accent Identification Model</h3>
+              <p className="text-sm text-gray-500">2023</p>
+              <ul className="list-disc list-inside mt-3 space-y-2">
+                <li>Built multimodal pipeline deployed as a Go service with TensorFlow backend.</li>
+                <li>Improved speech recognition accuracy across diverse accents by 20%.</li>
+                <li>Implemented CI/CD with GitHub Actions and monitored with Prometheus.</li>
+              </ul>
+            </CardContent>
+          </Card>
         </div>
-        <ul class="job-description">
-          <li>Enhanced code quality in Python, Java, and C/C++, increasing project success and reducing debugging time.</li>
-          <li>Fostered collaboration through pair programming and code reviews, strengthening team skills and communication.</li>
-          <li>Mentored students in algorithms, modular design, and debugging, enhancing their understanding of the subject.</li>
-        </ul>
-      </div>
+      </section>
 
-      <div class="job">
-        <div>
-          <span class="job-title">Senior Software Engineer</span>, 
-          <span class="job-company">Accolite Digital, Bangalore, India</span>
-          <span class="job-dates">August 2021 – January 2023</span>
-          <div class="clear-fix"></div>
-        </div>
-        <ul class="job-description">
-          <li>Developed backend tools and automated test scripts using Python and .NET Core, reducing manual testing by 60% and bugs by 85%, improving product quality and release speed.</li>
-          <li>Streamlined CI/CD with Jenkins and Azure DevOps, cutting deployment time by 30% and enhancing release reliability.</li>
-          <li>Optimized SQL Server and managed cross-platform systems, boosting uptime and performance, while ensuring timely delivery through Agile reporting and stakeholder communication.</li>
-        </ul>
-      </div>
+      {/* Contact */}
+      <section id="contact" className="container mx-auto py-12 px-4">
+        <h2 className="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6">
+          Contact
+        </h2>
+        <p>Email: <a href="mailto:neetatechy@gmail.com" className="text-blue-600">neetatechy@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/neeta-kannu" target="_blank" className="text-blue-600">linkedin.com/in/neeta-kannu</a></p>
+        <p>GitHub: <a href="https://github.com/NeetaCode" target="_blank" className="text-blue-600">github.com/NeetaCode</a></p>
+        <Button className="mt-4">
+          <a href="https://raw.githubusercontent.com/NeetaCode/Profile/main/Resume_Neeta_Kannu.pdf" download>Download Resume</a>
+        </Button>
+      </section>
 
-      <div class="job">
-        <div>
-          <span class="job-title">Software Consultant</span>, 
-          <span class="job-company">Capgemini, Bangalore, India</span>
-          <span class="job-dates">November 2019 – August 2021</span>
-          <div class="clear-fix"></div>
-        </div>
-        <ul class="job-description">
-          <li>Automated backend tasks and data validation with Java, Postman, and Selenium, cutting manual effort and boosting data accuracy and workflow speed.</li>
-          <li>Enhanced Oracle and SQL Server performance and enforced secure coding via SonarQube, improving compliance and reducing bugs.</li>
-          <li>Worked in Agile teams to speed up delivery and improve release quality, increasing customer satisfaction and business agility.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <div>
-          <span class="job-title">Systems Engineer</span>, 
-          <span class="job-company">Tata Consultancy Services, Bangalore, India</span>
-          <span class="job-dates">June 2015 – November 2019</span>
-          <div class="clear-fix"></div>
-        </div>
-        <ul class="job-description">
-          <li>Automated deployments and system tasks using Jenkins, PowerShell, and Bash, speeding up releases and reducing errors.</li>
-          <li>Boosted software quality and security with Selenium, Maven, TestNG, and SonarQube, cutting manual testing by 30% and minimizing risks.</li>
-          <li>Improved performance and scalability through Oracle/SQL optimizations and Docker, paving the way for Kubernetes-based cloud adoption.</li>
-        </ul>
-      </div>
-
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="project">
-        <div>
-          <span class="project-title">Prompt Engineering for LLMs</span>
-          <span class="project-dates">January 2025 – Present</span>
-          <div class="clear-fix"></div>
-        </div>
-        <ul class="project-description">
-          <li>Improved LLM reasoning and context handling for more accurate, decision-supportive outputs in AI applications.</li>
-          <li>Refined prompt strategies to reduce errors and boost efficiency, accelerating deployment and increasing user trust.</li>
-          <li>Technologies: Semantic parsing, Retrieval-Augmented Generation (RAG), Representation Learning, Large Language Models (LLMs)</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <div>
-          <span class="project-title">Accent Identification Model (ANN)</span>
-          <span class="project-dates">May 2023 – January 2024</span>
-          <div class="clear-fix"></div>
-        </div>
-        <ul class="project-description">
-          <li>Enhanced speech recognition accuracy across diverse accents, improving user experience and accessibility.</li>
-          <li>Advanced multimodal AI with inclusive, context-aware models, broadening market reach and boosting customer satisfaction.</li>
-          <li>Technologies: Python, TensorFlow, Scikit-learn, Artificial Neural Networks (ANN)</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <div>
-          <span class="project-title">Heart Disease Prediction (Logistic Regression)</span>
-          <span class="project-dates">January 2024 – May 2024</span>
-          <div class="clear-fix"></div>
-        </div>
-        <ul class="project-description">
-          <li>Achieved 85% prediction accuracy to support early diagnosis and data-driven decisions in clinical settings.</li>
-          <li>Showcased predictive modeling’s impact on improving healthcare outcomes and lowering long-term treatment costs.</li>
-          <li>Technologies: Python, Scikit-learn, Logistic Regression, Supervised Learning</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <div>
-          <span class="project-title">3D Chromosome Reconstruction (Reinforcement Learning)</span>
-          <span class="project-dates">January 2024 – May 2024</span>
-          <div class="clear-fix"></div>
-        </div>
-        <ul class="project-description">
-          <li>Boosted reconstruction accuracy by 90%, enhancing precision in genomic modeling.</li>
-          <li>Enabled deeper insights into gene interactions and chromosomal behavior, advancing biomedical research and personalized medicine.</li>
-          <li>Technologies: TensorFlow, Reinforcement Learning, Deep Learning, Python, Genomic Data Analysis</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="certifications" class="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Python for Data Science and AI – Coursera, Aug 2020</li>
-        <li>Overview of Data Visualization – Coursera, Jan 2024</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:neetatechy@gmail.com">neetatechy@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/neeta-kannu/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/neeta-kannu/</a></p>
-      <p>GitHub: <a href="https://github.com/NeetaCode" target="_blank" rel="noopener noreferrer">https://github.com/NeetaCode</a></p>
-    </section>
-
-    <section id="resume-section" style="margin-top: 2rem;">
-  <h2>Resume</h2>
-  <p>
-    <a href="https://raw.githubusercontent.com/NeetaCode/Profile/main/Resume_Neeta_Kannu.pdf" download target="_blank" rel="noopener noreferrer" style="color:#0077cc;">
-      Download my Resume (PDF)
-    </a>
-  </p>
-</section>
-
-  </main>
-
-  <footer>
-    <p>© 2025 Neeta Kannu</p>
-  </footer>
-
-</body>
-</html>
+      {/* Footer */}
+      <footer className="bg-gray-900 text-gray-400 text-center py-4 mt-12">
+        © 2025 Neeta Kannu
+      </footer>
+    </main>
+  );
+}
