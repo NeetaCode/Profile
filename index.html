@@ -19,42 +19,21 @@
 
   <!-- Sidebar -->
   <aside class="w-64 bg-gradient-to-b from-blue-600 to-purple-600 text-white h-screen fixed flex flex-col items-center p-8">
-    <!-- Profile Picture -->
     <img src="https://raw.githubusercontent.com/NeetaCode/Profile/main/Profile_%20Pic.jpg" 
          alt="Neeta Kannu" class="w-32 h-32 rounded-full border-4 border-white shadow-lg mb-6 object-cover">
 
-     <!-- Name -->
     <h1 class="text-2xl font-bold mb-6 text-center">Neeta Kannu</h1>
-    
+
     <!-- Contact & Resume Icons -->
     <div class="flex space-x-4 mt-8 text-2xl">
-      <a href="mailto:neetatechy@gmail.com" class="hover:text-yellow-300 transition">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/neeta-kannu/" target="_blank" rel="noopener noreferrer"
-         class="hover:text-yellow-300 transition">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/NeetaCode" target="_blank" rel="noopener noreferrer"
-         class="hover:text-yellow-300 transition">
-        <i class="fab fa-github"></i>
-      </a>
-      <!-- Resume PDF Icon -->
-<!--       <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer"
-         class="hover:text-yellow-300 transition">
-        <i class="fas fa-file-pdf"></i>
-      </a> -->
-      <!-- Resume Icon -->
-      <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer"
-         class="hover:text-yellow-300 transition">
-        <i class="fas fa-file-lines"></i>
-      </a>
+      <a href="mailto:neetatechy@gmail.com" class="hover:text-yellow-300 transition"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/neeta-kannu/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/NeetaCode" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition"><i class="fab fa-github"></i></a>
+      <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition"><i class="fas fa-file-lines"></i></a>
     </div>
 
-   
-
     <!-- Navigation -->
-    <nav class="flex flex-col space-y-4 text-lg font-medium w-full">
+    <nav class="flex flex-col space-y-4 text-lg font-medium w-full mt-8">
       <a href="#home" class="hover:text-yellow-300 transition text-center">Home</a>
       <a href="#about" class="hover:text-yellow-300 transition text-center">About</a>
       <a href="#education" class="hover:text-yellow-300 transition text-center">Education</a>
@@ -71,9 +50,7 @@
     <!-- Home Section with Typewriter -->
     <section id="home" class="py-16" data-aos="fade-up">
       <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Home</h2>
-      <p class="text-lg max-w-3xl">
-        <span id="typewriter" class="font-medium text-gray-800"></span>
-      </p>
+      <p class="text-lg max-w-3xl"><span id="typewriter" class="font-medium text-gray-800"></span></p>
     </section>
 
     <!-- About Section -->
@@ -82,8 +59,7 @@
       <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
         <div class="flex-shrink-0">
           <img src="https://raw.githubusercontent.com/NeetaCode/Profile/main/Profile_%20Pic.jpg" 
-               alt="Neeta Kannu" 
-               class="w-48 h-48 rounded-xl shadow-lg object-cover">
+               alt="Neeta Kannu" class="w-48 h-48 rounded-xl shadow-lg object-cover">
         </div>
         <div class="flex-1 space-y-6">
           <p class="text-lg leading-relaxed">
@@ -124,25 +100,60 @@
       </div>
     </section>
 
-    <!-- Experience, Projects, Certifications, Contact sections remain the same -->
-    <!-- You can paste your existing sections here -->
+    <!-- Experience Section -->
+    <section id="experience" class="py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Professional Experience</h2>
+      <!-- Add your experience cards here -->
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Projects</h2>
+      <!-- Add your project cards here -->
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Certifications</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Python for Data Science and AI – Coursera, Aug 2020</li>
+        <li>Overview of Data Visualization – Coursera, Jan 2024</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Contact</h2>
+      <p class="flex items-center gap-4 text-2xl">
+        <a href="mailto:neetatechy@gmail.com" class="text-blue-600 hover:text-blue-800 transition"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/neeta-kannu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/NeetaCode" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-gray-600 transition"><i class="fab fa-github"></i></a>
+        <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition"><i class="fas fa-file-lines"></i></a>
+      </p>
+      <p class="mt-6 flex gap-4">
+        <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg shadow hover:opacity-90 transition">View Resume</a>
+        <a href="Resume_Neeta_Kannu.pdf" download class="bg-gray-700 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-800 transition">Download Resume</a>
+      </p>
+    </section>
 
     <!-- Footer -->
     <footer class="mt-12 text-center py-6 text-gray-400 bg-gray-900 rounded-lg">
       © 2025 Neeta Kannu
     </footer>
-
   </main>
 
   <!-- Scripts -->
   <script>
+    // Always scroll to top on refresh
+    window.onbeforeunload = function () { window.scrollTo(0,0); }
+
     // Initialize AOS animations
     AOS.init({ duration: 1000, once: true });
 
     // Typewriter effect
     const typewriterElement = document.getElementById('typewriter');
     const words = [
-     "Welcome to my portfolio! I’m Neeta Kannu, an ML Engineer and Software Developer specializing in cloud-native systems, machine learning, and scalable solutions."
+      "Welcome to my portfolio! I’m Neeta Kannu, an ML Engineer and Software Developer specializing in cloud-native systems, machine learning, and scalable solutions."
     ];
     
     let wordIndex = 0;
@@ -152,9 +163,9 @@
       if (charIndex < words[wordIndex].length) {
         typewriterElement.textContent += words[wordIndex][charIndex];
         charIndex++;
-        setTimeout(typeWord, 100);
+        setTimeout(typeWord, 50);
       } else {
-        setTimeout(deleteWord, 1000);
+        setTimeout(deleteWord, 1500);
       }
     }
 
@@ -162,7 +173,7 @@
       if (charIndex > 0) {
         typewriterElement.textContent = words[wordIndex].substring(0, charIndex - 1);
         charIndex--;
-        setTimeout(deleteWord, 50);
+        setTimeout(deleteWord, 25);
       } else {
         wordIndex = (wordIndex + 1) % words.length;
         setTimeout(typeWord, 500);
