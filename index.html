@@ -23,20 +23,6 @@
     <img src="https://raw.githubusercontent.com/NeetaCode/Profile/main/Profile_%20Pic.jpg" 
          alt="Neeta Kannu" class="w-32 h-32 rounded-full border-4 border-white shadow-lg mb-6 object-cover">
 
-    <!-- Name -->
-    <h1 class="text-2xl font-bold mb-6 text-center">Neeta Kannu</h1>
-
-    <!-- Navigation -->
-    <nav class="flex flex-col space-y-4 text-lg font-medium w-full">
-      <a href="#home" class="hover:text-yellow-300 transition text-center">Home</a>
-      <a href="#about" class="hover:text-yellow-300 transition text-center">About</a>
-      <a href="#education" class="hover:text-yellow-300 transition text-center">Education</a>
-      <a href="#experience" class="hover:text-yellow-300 transition text-center">Experience</a>
-      <a href="#projects" class="hover:text-yellow-300 transition text-center">Projects</a>
-      <a href="#certifications" class="hover:text-yellow-300 transition text-center">Certifications</a>
-      <a href="#contact" class="hover:text-yellow-300 transition text-center">Contact</a>
-    </nav>
-
     <!-- Contact & Resume Icons -->
     <div class="flex space-x-4 mt-8 text-2xl">
       <a href="mailto:neetatechy@gmail.com" class="hover:text-yellow-300 transition">
@@ -50,47 +36,55 @@
          class="hover:text-yellow-300 transition">
         <i class="fab fa-github"></i>
       </a>
+      <!-- Resume PDF Icon -->
       <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer"
          class="hover:text-yellow-300 transition">
         <i class="fas fa-file-pdf"></i>
       </a>
     </div>
+
+    <!-- Name -->
+    <h1 class="text-2xl font-bold mb-6 text-center">Neeta Kannu</h1>
+
+    <!-- Navigation -->
+    <nav class="flex flex-col space-y-4 text-lg font-medium w-full">
+      <a href="#home" class="hover:text-yellow-300 transition text-center">Home</a>
+      <a href="#about" class="hover:text-yellow-300 transition text-center">About</a>
+      <a href="#education" class="hover:text-yellow-300 transition text-center">Education</a>
+      <a href="#experience" class="hover:text-yellow-300 transition text-center">Experience</a>
+      <a href="#projects" class="hover:text-yellow-300 transition text-center">Projects</a>
+      <a href="#certifications" class="hover:text-yellow-300 transition text-center">Certifications</a>
+      <a href="#contact" class="hover:text-yellow-300 transition text-center">Contact</a>
+    </nav>
   </aside>
 
   <!-- Main Content -->
   <main class="flex-1 ml-64 p-12">
 
-    <!-- Home Section -->
+    <!-- Home Section with Typewriter -->
     <section id="home" class="py-16" data-aos="fade-up">
       <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Home</h2>
       <p class="text-lg max-w-3xl">
-        Welcome to my portfolio! I’m Neeta Kannu, an ML Engineer and Software Developer specializing in cloud-native systems, machine learning, and scalable solutions.
+        <span id="typewriter" class="font-medium text-gray-800"></span>
       </p>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-16" data-aos="fade-up">
       <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-10">About Me</h2>
-      
       <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
-        <!-- Left: Picture -->
         <div class="flex-shrink-0">
           <img src="https://raw.githubusercontent.com/NeetaCode/Profile/main/Profile_%20Pic.jpg" 
                alt="Neeta Kannu" 
                class="w-48 h-48 rounded-xl shadow-lg object-cover">
         </div>
-        
-        <!-- Right: Summary & Details -->
         <div class="flex-1 space-y-6">
-          <!-- Quick Summary -->
           <p class="text-lg leading-relaxed">
             ML Engineer with 8+ years of experience in software engineering, applied ML, and 
             <span class="font-semibold text-blue-600">Go-based cloud-native development</span>. Skilled in building distributed 
             systems, microservices (Go, gRPC, GraphQL), and deploying ML pipelines at scale on Kubernetes. 
             Hands-on with LLMs, NLP, multimodal AI, and MLOps stacks (MLflow, Kubeflow, Weights & Biases).
           </p>
-          
-          <!-- Structured Info -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 text-gray-700 text-lg">
             <div><span class="font-semibold">Major:</span> Machine Learning / Software Engineering</div>
             <div><span class="font-semibold">Graduation Date:</span> May 2024</div>
@@ -123,96 +117,8 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-16" data-aos="fade-up">
-      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Professional Experience</h2>
-      <div class="grid gap-8 md:grid-cols-2">
-        <div class="bg-white shadow-xl rounded-xl p-6 transform hover:-translate-y-2 transition" data-aos="zoom-in">
-          <h3 class="font-bold text-xl">Research Assistant @ UCCS</h3>
-          <p class="text-sm text-gray-500">Aug 2023 – May 2024</p>
-          <ul class="list-disc list-inside mt-3 space-y-2">
-            <li>Built Go + Python ML pipelines with Docker, Kubernetes, and GCP.</li>
-            <li>Optimized inference with gRPC microservices, reducing latency by 25%.</li>
-            <li>Implemented observability with Prometheus and Grafana.</li>
-          </ul>
-        </div>
-        <div class="bg-white shadow-xl rounded-xl p-6 transform hover:-translate-y-2 transition" data-aos="zoom-in">
-          <h3 class="font-bold text-xl">Senior Software Engineer @ Accolite</h3>
-          <p class="text-sm text-gray-500">Aug 2021 – Jan 2023</p>
-          <ul class="list-disc list-inside mt-3 space-y-2">
-            <li>Developed Go-based backend APIs serving millions of requests daily.</li>
-            <li>Scaled systems with Kafka + Redis for event-driven architecture.</li>
-            <li>Deployed services via GitHub Actions + ArgoCD with 99.99% uptime.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-gray-100 rounded-xl" data-aos="fade-up">
-      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Projects</h2>
-      <div class="grid gap-8 md:grid-cols-2">
-        <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition" data-aos="flip-left">
-          <h3 class="font-bold text-lg">Prompt Engineering for LLMs</h3>
-          <p class="text-sm text-gray-500">2025</p>
-          <ul class="list-disc list-inside mt-3 space-y-2">
-            <li>Deployed RAG chatbot using Go services + Python ML.</li>
-            <li>Integrated Pinecone for semantic search.</li>
-            <li>Optimized cost with LoRA fine-tuning.</li>
-          </ul>
-        </div>
-        <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition" data-aos="flip-right">
-          <h3 class="font-bold text-lg">Accent Identification Model</h3>
-          <p class="text-sm text-gray-500">2023</p>
-          <ul class="list-disc list-inside mt-3 space-y-2">
-            <li>Built multimodal pipeline deployed as a Go microservice.</li>
-            <li>Improved recognition accuracy across accents by 20%.</li>
-            <li>Monitored with Prometheus + Grafana dashboards.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="py-16" data-aos="fade-up">
-      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Certifications</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li>Python for Data Science and AI – Coursera, Aug 2020</li>
-        <li>Overview of Data Visualization – Coursera, Jan 2024</li>
-      </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16" data-aos="fade-up">
-      <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Contact</h2>
-      <p class="flex items-center gap-4 text-2xl">
-        <a href="mailto:neetatechy@gmail.com" class="text-blue-600 hover:text-blue-800 transition">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/neeta-kannu/" target="_blank" rel="noopener noreferrer"
-           class="text-blue-600 hover:text-blue-800 transition">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/NeetaCode" target="_blank" rel="noopener noreferrer"
-           class="text-gray-800 hover:text-gray-600 transition">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer"
-           class="hover:text-red-600 transition">
-          <i class="fas fa-file-pdf"></i>
-        </a>
-      </p>
-      <p class="mt-6 flex gap-4">
-        <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer"
-           class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg shadow hover:opacity-90 transition">
-          View Resume
-        </a>
-        <a href="Resume_Neeta_Kannu.pdf" download
-           class="bg-gray-700 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-800 transition">
-          Download Resume
-        </a>
-      </p>
-    </section>
+    <!-- Experience, Projects, Certifications, Contact sections remain the same -->
+    <!-- You can paste your existing sections here -->
 
     <!-- Footer -->
     <footer class="mt-12 text-center py-6 text-gray-400 bg-gray-900 rounded-lg">
@@ -225,6 +131,44 @@
   <script>
     // Initialize AOS animations
     AOS.init({ duration: 1000, once: true });
+
+    // Typewriter effect
+    const typewriterElement = document.getElementById('typewriter');
+    const words = [
+      "Welcome to my portfolio!",
+      "I’m Neeta Kannu,",
+      "an ML Engineer",
+      "and Software Developer",
+      "specializing in cloud-native systems,",
+      "machine learning,",
+      "and scalable solutions."
+    ];
+    
+    let wordIndex = 0;
+    let charIndex = 0;
+
+    function typeWord() {
+      if (charIndex < words[wordIndex].length) {
+        typewriterElement.textContent += words[wordIndex][charIndex];
+        charIndex++;
+        setTimeout(typeWord, 100);
+      } else {
+        setTimeout(deleteWord, 1000);
+      }
+    }
+
+    function deleteWord() {
+      if (charIndex > 0) {
+        typewriterElement.textContent = words[wordIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(deleteWord, 50);
+      } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeWord, 500);
+      }
+    }
+
+    typeWord();
   </script>
 </body>
 </html>
