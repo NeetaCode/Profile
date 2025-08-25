@@ -1,170 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neeta Kannu - Portfolio</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-50 text-gray-800 transition-colors duration-300 flex">
 
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-2xl font-bold text-blue-600">My Portfolio</h1>
-      <nav class="space-x-6 text-gray-700 font-medium">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#education" class="hover:text-blue-600">Education</a>
-        <a href="#experience" class="hover:text-blue-600">Experience</a>
-        <a href="#skills" class="hover:text-blue-600">Skills</a>
-        <a href="#projects" class="hover:text-blue-600">Projects</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gradient-to-b from-blue-600 to-purple-600 text-white h-screen fixed flex flex-col items-center p-8">
+        <img src="https://raw.githubusercontent.com/NeetaCode/Profile/main/Profile_%20Pic.jpg" 
+             alt="Neeta Kannu" 
+             class="w-32 h-32 rounded-full border-4 border-white shadow-lg mb-6 object-cover">
+        <h1 class="text-2xl font-bold mb-6 text-center">Neeta Kannu</h1>
 
-  <main class="max-w-6xl mx-auto px-6 py-12">
-
-    <!-- About -->
-    <section id="about" class="mb-16">
-      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">About Me</h2>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        Passionate systems engineer and researcher with hands-on experience in machine learning,
-        cloud-native solutions, and network engineering. Skilled at building scalable systems,
-        automating workflows, and delivering efficient technical solutions.
-      </p>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="mb-16">
-      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">Education</h2>
-      <div class="relative border-l-4 border-blue-500 ml-2 pl-12">
-
-        <!-- UCCS -->
-        <div class="mb-10 relative">
-          <span class="absolute -left-[14px] top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-          <h3 class="text-xl font-semibold">
-            Master of Science, Computer Science, 
-            <a href="https://www.uccs.edu" class="text-blue-600 hover:underline" target="_blank">University of Colorado Colorado Springs</a>
-          </h3>
-          <p class="text-sm text-gray-500">Aug 2022 – May 2024</p>
+        <!-- Contact & Resume Icons -->
+        <div class="flex space-x-4 mt-8 text-2xl">
+            <a href="mailto:neetatechy@gmail.com" class="hover:text-yellow-300 transition">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/neeta-kannu/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/NeetaCode" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition">
+                <i class="fas fa-file-lines"></i>
+            </a>
         </div>
 
-        <!-- VTU -->
-        <div class="mb-10 relative">
-          <span class="absolute -left-[14px] top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-          <h3 class="text-xl font-semibold">
-            Bachelor of Engineering, Information Science, 
-            <a href="https://vtu.ac.in" class="text-blue-600 hover:underline" target="_blank">Visvesvaraya Technological University</a>
-          </h3>
-          <p class="text-sm text-gray-500">Aug 2016 – Jul 2020</p>
-        </div>
+        <!-- Navigation -->
+        <nav class="flex flex-col space-y-4 text-lg font-medium w-full mt-8">
+            <a href="#home" class="hover:text-yellow-300 transition text-center">Home</a>
+            <a href="#about" class="hover:text-yellow-300 transition text-center">About</a>
+            <a href="#education" class="hover:text-yellow-300 transition text-center">Education</a>
+            <a href="#experience" class="hover:text-yellow-300 transition text-center">Experience</a>
+            <a href="#projects" class="hover:text-yellow-300 transition text-center">Projects</a>
+            <a href="#certifications" class="hover:text-yellow-300 transition text-center">Certifications</a>
+            <a href="#contact" class="hover:text-yellow-300 transition text-center">Contact</a>
+        </nav>
+    </aside>
 
-      </div>
-    </section>
+    <!-- Main Content -->
+    <main class="flex-1 ml-64 p-12">
 
-    <!-- Professional Experience -->
-    <section id="experience" class="mb-16">
-      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">Professional Experience</h2>
-      <div class="relative border-l-4 border-blue-500 ml-2 pl-12">
+        <!-- Home Section with Typewriter -->
+        <section id="home" class="py-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Home</h2>
+            <p class="text-lg max-w-3xl">
+                <span id="typewriter" class="font-medium text-gray-800"></span>
+            </p>
+        </section>
 
-        <!-- Research Assistant -->
-        <div class="mb-10 relative">
-          <span class="absolute -left-[14px] top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-          <h3 class="text-xl font-semibold">
-            Research Assistant, 
-            <a href="https://www.uccs.edu/engineering" target="_blank" class="text-blue-600 hover:underline">
-              UCCS College of Engineering and Applied Science
-            </a>, CO, USA
-          </h3>
-          <p class="text-sm text-gray-500 mb-2">Aug 2023 – May 2024</p>
-          <ul class="list-disc text-gray-700 mt-2 pl-6 space-y-2">
-            <li>Processed and visualized large-scale genomic datasets, streamlining ML workflows and delivering a 30% faster pipeline for accelerated research.</li>
-            <li>Containerized end-to-end ML systems using Docker, CUDA, and GCP, enabling scalable, repeatable experimentation in distributed environments.</li>
-            <li>Refactored existing code into modular Python scripts with embedded feature engineering, improving maintainability and reducing onboarding time.</li>
-          </ul>
-        </div>
+        <!-- About Section -->
+        <section id="about" class="py-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-10">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+                <div class="flex-shrink-0">
+                    <img src="https://raw.githubusercontent.com/NeetaCode/Profile/main/Profile_%20Pic.jpg" 
+                         alt="Neeta Kannu" 
+                         class="w-48 h-48 rounded-xl shadow-lg object-cover">
+                </div>
+                <div class="flex-1 space-y-6">
+                    <p class="text-lg leading-relaxed">
+                        ML Engineer with 8+ years of experience in software engineering, applied ML, and 
+                        <span class="font-semibold text-blue-600">Go-based cloud-native development</span>. 
+                        Skilled in building distributed systems, microservices (Go, gRPC, GraphQL), 
+                        and deploying ML pipelines at scale on Kubernetes. Hands-on with LLMs, NLP, 
+                        multimodal AI, and MLOps stacks (MLflow, Kubeflow, Weights & Biases).
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 text-gray-700 text-lg">
+                        <div><span class="font-semibold">Major:</span> Machine Learning / Software Engineering</div>
+                        <div><span class="font-semibold">Graduation Date:</span> May 2024</div>
+                        <div><span class="font-semibold">School:</span> University of Colorado Colorado Springs</div>
+                        <div><span class="font-semibold">Email:</span> 
+                            <a href="mailto:neetatechy@gmail.com" class="text-blue-600 hover:underline">neetatechy@gmail.com</a>
+                        </div>
+                        <div><span class="font-semibold">City:</span> Colorado Springs, CO</div>
+                        <div><span class="font-semibold">Open for relocation:</span> Anywhere in US</div>
+                        <div><span class="font-semibold">Start Date:</span> ASAP</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Network Assistant -->
-        <div class="mb-10 relative">
-          <span class="absolute -left-[14px] top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-          <h3 class="text-xl font-semibold">
-            Network Assistant, 
-            <a href="https://www.uccs.edu/oit" target="_blank" class="text-blue-600 hover:underline">UCCS OIT</a>, 
-            Colorado Springs, CO, USA
-          </h3>
-          <p class="text-sm text-gray-500 mb-2">Jun 2024 – Present</p>
-          <ul class="list-disc text-gray-700 mt-2 pl-6 space-y-2">
-            <li>Automated network provisioning using Python, reducing manual configuration time by 40% and streamlining deployments.</li>
-            <li>Monitored Windows and Linux systems with SolarWinds and ClearPass, cutting downtime incidents by 25% and enhancing system reliability.</li>
-          </ul>
-        </div>
+        <!-- Education Section -->
+        <section id="education" class="py-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Education</h2>
+            <div class="grid gap-6">
+                <div class="bg-white shadow-lg rounded-xl p-6">
+                    <h3 class="font-bold text-xl">University of Colorado Colorado Springs</h3>
+                    <p class="text-gray-500">Graduation: May 2024</p>
+                    <p class="mt-2">Major: Machine Learning / Software Engineering</p>
+                </div>
+            </div>
+        </section>
 
-        <!-- Systems Engineer -->
-        <div class="mb-10 relative">
-          <span class="absolute -left-[14px] top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
-          <h3 class="text-xl font-semibold">
-            Systems Engineer, 
-            <a href="https://www.tcs.com/" target="_blank" class="text-blue-600 hover:underline">Tata Consultancy Services</a>, 
-            Bangalore, India
-          </h3>
-          <p class="text-sm text-gray-500 mb-2">Jan 2021 – Jul 2022</p>
-          <ul class="list-disc text-gray-700 mt-2 pl-6 space-y-2">
-            <li>Developed microservices with Python and FastAPI, improving API response time by 35%.</li>
-            <li>Built CI/CD pipelines with Jenkins and GitHub Actions, reducing deployment errors by 20%.</li>
-            <li>Optimized SQL queries and database schemas, cutting query times by 40%.</li>
-          </ul>
-        </div>
+        <!-- Experience Section as Timeline -->
+        <section id="experience" class="py-16 relative" data-aos="fade-up">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-12">Professional Experience</h2>
+            <div class="relative border-l-4 border-blue-500 ml-6">
 
-      </div>
-    </section>
+                <!-- Research Assistant -->
+                <div class="mb-10 ml-6 relative">
+                    <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
+                    <h3 class="text-xl font-semibold">
+                        Research Assistant, 
+                        <a href="https://www.uccs.edu/engineering" target="_blank" class="text-blue-600 hover:underline">UCCS College of Engineering and Applied Science</a>, CO, USA
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-2">Aug 2023 – May 2024</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Processed and visualized large-scale genomic datasets, streamlining ML workflows and delivering a 30% faster pipeline for accelerated research.</li>
+                        <li>Containerized end-to-end ML systems using Docker, CUDA, and GCP, enabling scalable, repeatable experimentation in distributed environments.</li>
+                        <li>Refactored existing code into modular Python scripts with embedded feature engineering, improving maintainability and reducing onboarding time.</li>
+                    </ul>
+                </div>
 
-    <!-- Skills -->
-    <section id="skills" class="mb-16">
-      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">Skills</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 text-gray-700">
-        <div><strong>Languages:</strong> Python, C, JavaScript, SQL</div>
-        <div><strong>Frameworks:</strong> FastAPI, Flask, Node.js</div>
-        <div><strong>Cloud:</strong> AWS, GCP</div>
-        <div><strong>Databases:</strong> MySQL, PostgreSQL</div>
-        <div><strong>DevOps:</strong> Docker, Kubernetes, Jenkins</div>
-        <div><strong>Tools:</strong> Git, Linux, SolarWinds, ClearPass</div>
-      </div>
-    </section>
+                <!-- Network Assistant -->
+                <div class="mb-10 ml-6 relative">
+                    <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
+                    <h3 class="text-xl font-semibold">
+                        Network Assistant, 
+                        <a href="https://www.uccs.edu/oit" target="_blank" class="text-blue-600 hover:underline">UCCS OIT</a>, Colorado Springs, CO, USA
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-2">Jun 2024 – Present</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Automated network provisioning using Python, reducing manual configuration time by 40% and streamlining deployments.</li>
+                        <li>Monitored Windows and Linux systems with SolarWinds and ClearPass, cutting downtime incidents by 25% and enhancing system reliability.</li>
+                    </ul>
+                </div>
 
-    <!-- Projects -->
-    <section id="projects" class="mb-16">
-      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">Projects</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-white shadow p-6 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">Genomic ML Pipeline</h3>
-          <p class="text-gray-700">Built an end-to-end ML pipeline on GCP for large genomic datasets, reducing preprocessing time by 50%.</p>
-        </div>
-        <div class="bg-white shadow p-6 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">Network Automation</h3>
-          <p class="text-gray-700">Developed Python scripts to automate network provisioning and monitoring, improving system uptime.</p>
-        </div>
-        <div class="bg-white shadow p-6 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">Microservices Platform</h3>
-          <p class="text-gray-700">Engineered Python-based microservices for e-commerce applications, enabling 35% faster API responses.</p>
-        </div>
-      </div>
-    </section>
+                <!-- Senior Software Engineer -->
+                <div class="mb-10 ml-6 relative">
+                    <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
+                    <h3 class="text-xl font-semibold">
+                        Senior Software Engineer, 
+                        <a href="https://www.accolitedigital.com/" target="_blank" class="text-blue-600 hover:underline">Accolite Digital</a>, Bangalore, India
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-2">Aug 2021 – Jan 2023</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Engineered C# backend and Selenium test suites, enabling scalable deployments, boosting release speed 30% and cutting defects 25%.</li>
+                        <li>Orchestrated Jenkins and Azure DevOps CI/CD, reducing manual deployment effort 50% and ensuring reliable, production-ready releases.</li>
+                        <li>Optimized monitoring and deployment scripts, improving system visibility, reducing downtime, and supporting reproducible data workflows.</li>
+                    </ul>
+                </div>
 
-    <!-- Contact -->
-    <section id="contact" class="mb-16">
-      <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-2 mb-6">Contact</h2>
-      <p class="text-lg text-gray-700">Email: <a href="mailto:yourname@email.com" class="text-blue-600 hover:underline">yourname@email.com</a></p>
-      <p class="text-lg text-gray-700">LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/yourprofile</a></p>
-      <p class="text-lg text-gray-700">GitHub: <a href="https://github.com/yourgithub" target="_blank" class="text-blue-600 hover:underline">github.com/yourgithub</a></p>
-    </section>
+                <!-- Software Consultant -->
+                <div class="mb-10 ml-6 relative">
+                    <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
+                    <h3 class="text-xl font-semibold">
+                        Software Consultant, 
+                        <a href="https://www.capgemini.com/" target="_blank" class="text-blue-600 hover:underline">Capgemini</a>, Bangalore, India
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-2">Nov 2019 – Aug 2021</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Developed and tested REST APIs with Java, Selenium, and Postman, accelerating QA turnaround 40% and improving software reliability.</li>
+                        <li>Containerized applications using Docker and Kubernetes, enhancing horizontal scalability and minimizing environment drift in production.</li>
+                        <li>Migrated large-scale systems to cloud architectures, integrating CI/CD with Git and Jenkins to enable continuous, reliable delivery.</li>
+                    </ul>
+                </div>
 
-  </main>
+                <!-- Systems Engineer -->
+                <div class="mb-10 ml-6 relative">
+                    <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
+                    <h3 class="text-xl font-semibold">
+                        Systems Engineer, 
+                        <a href="https://www.tcs.com/" target="_blank" class="text-blue-600 hover:underline">Tata Consultancy Services</a>, Bangalore, India
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-2">Jun 2015 – Nov 2019</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Delivered high-availability backend services in Java, C++, and Shell, ensuring 24/7 enterprise uptime and system reliability.</li>
+                        <li>Tuned complex SQL queries, improving database throughput by 25% and accelerating application responsiveness.</li>
+                        <li>Automated delivery pipelines with PowerShell and Jenkins, cutting release time by 40% and enhancing deployment operations.</li>
+                        <li>Mentored three junior engineers in automation and requirements analysis, accelerating onboarding by 30% and strengthening team capability.</li>
+                        <li>Resolved concurrency and threading issues in distributed systems, enhancing stability and ensuring SLA compliance.</li>
+                    </ul>
+                </div>
 
-  <!-- Footer -->
-  <footer class="bg-white border-t text-center py-4">
-    <p class="text-gray-500 text-sm">© 2025 My Portfolio. All rights reserved.</p>
-  </footer>
+            </div>
+        </section>
+
+        <!-- Projects Section as Timeline -->
+        <section id="projects" class="py-16 relative" data-aos="fade-up">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-12">Projects</h2>
+            <div class="relative border-l-4 border-blue-500 ml-6">
+
+                <!-- Project Items -->
+                <div class="mb-10 ml-6 relative">
+                    <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
+                    <h3 class="text-xl font-semibold">Prompt Engineering for LLMs</h3>
+                    <p class="text-sm text-gray-500 mb-2">Jan 2025 – Present</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Enhanced LLM accuracy by 35% on GSM8K, SVAMP, and MAWPS using prompt engineering, reducing hallucinations.</li>
+                        <li>Increased retrieval relevance by 22% by integrating semantic search in RAG pipelines for faster, more accurate enterprise responses.</li>
+                        <li>Led fine-tuning of LLaMA/ChatGPT-3.5 on GPU-optimized GCP, reducing inference costs by 20% while maintaining performance.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-10 ml-6 relative">
+                    <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
+                    <h3 class="text-xl font-semibold">Accent Identification Model (ANN)</h3>
+                    <p class="text-sm text-gray-500 mb-2">May 2023 – Jan 2024</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Constructed a multilingual accent classifier (Speech Accent Archive), boosting ASR accuracy by 20% and expanding global coverage.</li>
+                        <li>Engineered audio-text fusion preprocessing, cutting misclassifications and improving model generalization across diverse accents.</li>
+                        <li>Scaled ML experiments on GCP, implementing reproducible workflows with Weights & Biases (W&B) to accelerate model deployment.</li>
+                        <li>Owned implementation of PyTorch, TensorFlow, Hugging Face to deliver high-performance, production-ready speech models.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-10 ml-6 relative">
+                    <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
+                    <h3 class="text-xl font-semibold">Heart Disease Prediction</h3>
+                    <p class="text-sm text-gray-500 mb-2">Jan 2024 – May 2024</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Produced SVM and Logistic Regression models on Cleveland dataset, achieving 85% accuracy for early cardiac risk, enabling faster care.</li>
+                        <li>Applied PCA for dimensionality reduction, accelerating model inference by 30% and improving deployment efficiency.</li>
+                        <li>Deployed models on GCP using Docker containers, facilitating faster iterations and reliable deployments.</li>
+                        <li>Leveraged Python, Scikit-learn, PCA, Docker, and GCP to build production-ready, high-impact healthcare AI solutions.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-10 ml-6 relative">
+                    <span class="absolute -left-3.5 top-1 bg-blue-500 w-6 h-6 rounded-full border-2 border-white"></span>
+                    <h3 class="text-xl font-semibold">3D Chromosome Reconstruction (RL)</h3>
+                    <p class="text-sm text-gray-500 mb-2">Jan 2024 – May 2024</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Implemented Python, TensorFlow, CUDA, Docker, and HPC to build high-performance, reproducible genomics AI workflows.</li>
+                        <li>Designed 3D chromosome folding simulation using Reinforcement Learning on Hi-C data, improving spatial prediction.</li>
+                        <li>Reduced training cycles 40% via CUDA parallelization and scalable container orchestration on HPC clusters, speeding experimentation.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Certifications</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Python for Data Science and AI – Coursera, Aug 2020</li>
+                <li>Overview of Data Visualization – Coursera, Jan 2024</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16" data-aos="fade-up">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2 mb-6">Contact</h2>
+            <p class="flex items-center gap-4 text-2xl">
+                <a href="mailto:neetatechy@gmail.com" class="text-blue-600 hover:text-blue-800 transition"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/neeta-kannu/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/NeetaCode" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-gray-600 transition"><i class="fab fa-github"></i></a>
+                <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition"><i class="fas fa-file-lines"></i></a>
+            </p>
+            <p class="mt-6 flex gap-4">
+                <a href="Resume_Neeta_Kannu.pdf" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg shadow hover:opacity-90 transition">View Resume</a>
+                <a href="Resume_Neeta_Kannu.pdf" download class="bg-gray-700 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-800 transition">Download Resume</a>
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center py-6 text-gray-400 bg-gray-900 rounded-lg">
+            © 2025 Neeta Kannu
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // Always scroll to top on refresh
+        window.onbeforeunload = function () {
+            window.scrollTo(0,0);
+        }
+
+        // Initialize AOS animations
+        AOS.init({ duration: 1000, once: true });
+
+        // Typewriter effect
+        const typewriterElement = document.getElementById('typewriter');
+        const words = [
+            "Welcome to my portfolio! I’m Neeta Kannu, an ML Engineer and Software Developer specializing in cloud-native systems, machine learning, and scalable solutions."
+        ];
+        let wordIndex = 0;
+        let charIndex = 0;
+
+        function typeWord() {
+            if (charIndex < words[wordIndex].length) {
+                typewriterElement.textContent += words[wordIndex][charIndex];
+                charIndex++;
+                setTimeout(typeWord, 50);
+            } else {
+                setTimeout(deleteWord, 1500);
+            }
+        }
+
+        function deleteWord() {
+            if (charIndex > 0) {
+                typewriterElement.textContent = words[wordIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(deleteWord, 25);
+            } else {
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(typeWord, 500);
+            }
+        }
+
+        typeWord();
+    </script>
 
 </body>
 </html>
