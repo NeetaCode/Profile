@@ -1,126 +1,117 @@
-// app/page.tsx (Next.js 13+ with Tailwind, shadcn/ui, and Framer Motion)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neeta Kannu - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import Link from "next/link";
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-6 shadow-md">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold">Neeta Kannu</h1>
+      <nav class="mt-3 space-x-6">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#experience" class="hover:underline">Experience</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#certifications" class="hover:underline">Certifications</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-export default function Portfolio() {
-  return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 text-gray-800 dark:text-gray-100">
-      {/* Header */}
-      <header className="bg-blue-600 text-white py-6 shadow-md">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold">Neeta Kannu</h1>
-          <nav className="mt-2 space-x-6">
-            <Link href="#about" className="hover:underline">About</Link>
-            <Link href="#experience" className="hover:underline">Experience</Link>
-            <Link href="#projects" className="hover:underline">Projects</Link>
-            <Link href="#certifications" className="hover:underline">Certifications</Link>
-            <Link href="#contact" className="hover:underline">Contact</Link>
-          </nav>
-        </div>
-      </header>
+  <!-- About -->
+  <section id="about" class="container mx-auto py-12 px-4">
+    <h2 class="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6">About Me</h2>
+    <p class="max-w-3xl text-lg leading-relaxed">
+      ML Engineer with 8+ years of experience in software engineering, applied ML, and 
+      <span class="font-semibold">Go-based cloud-native development</span>. Skilled in building distributed 
+      systems, microservices (Go, gRPC, GraphQL), and deploying ML pipelines at scale on Kubernetes. 
+      Hands-on with LLMs, NLP, multimodal AI, and MLOps stacks (MLflow, Kubeflow, Weights & Biases).
+    </p>
+  </section>
 
-      {/* About Section */}
-      <section id="about" className="container mx-auto py-12 px-4">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          className="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6"
-        >
-          About Me
-        </motion.h2>
-        <p className="max-w-3xl text-lg leading-relaxed">
-          ML Engineer with 8+ years of experience in software engineering, applied ML, and scalable 
-          <span className="font-semibold"> Go-based cloud-native development</span>. Skilled in building 
-          distributed systems, microservices (Go, gRPC, REST, GraphQL), and deploying ML pipelines at scale 
-          on Kubernetes. Hands-on with LLMs, NLP, multimodal AI, and MLOps stacks (MLflow, Kubeflow, Weights & Biases).
-        </p>
-      </section>
+  <!-- Experience -->
+  <section id="experience" class="container mx-auto py-12 px-4">
+    <h2 class="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6">Professional Experience</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Job 1 -->
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <h3 class="font-bold text-lg">Research Assistant @ UCCS</h3>
+        <p class="text-sm text-gray-500">Aug 2023 – May 2024</p>
+        <ul class="list-disc list-inside mt-3 space-y-2">
+          <li>Built <strong>Go + Python ML pipelines</strong> with Docker, K8s, and GCP.</li>
+          <li>Optimized inference with gRPC microservices, reducing latency by 25%.</li>
+          <li>Implemented observability with Prometheus and Grafana.</li>
+        </ul>
+      </div>
+      <!-- Job 2 -->
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <h3 class="font-bold text-lg">Senior Software Engineer @ Accolite</h3>
+        <p class="text-sm text-gray-500">Aug 2021 – Jan 2023</p>
+        <ul class="list-disc list-inside mt-3 space-y-2">
+          <li>Developed <strong>Go-based backend APIs</strong> serving millions of requests daily.</li>
+          <li>Scaled systems with Kafka + Redis for event-driven architecture.</li>
+          <li>Deployed services via GitHub Actions + ArgoCD with 99.99% uptime.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-      {/* Professional Experience */}
-      <section id="experience" className="container mx-auto py-12 px-4">
-        <h2 className="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6">
-          Professional Experience
-        </h2>
+  <!-- Projects -->
+  <section id="projects" class="container mx-auto py-12 px-4">
+    <h2 class="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6">Projects</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <h3 class="font-bold">Prompt Engineering for LLMs</h3>
+        <p class="text-sm text-gray-500">2025</p>
+        <ul class="list-disc list-inside mt-3 space-y-2">
+          <li>Deployed RAG chatbot using Go services + Python ML.</li>
+          <li>Integrated Pinecone for semantic search.</li>
+          <li>Optimized cost with LoRA fine-tuning.</li>
+        </ul>
+      </div>
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <h3 class="font-bold">Accent Identification Model</h3>
+        <p class="text-sm text-gray-500">2023</p>
+        <ul class="list-disc list-inside mt-3 space-y-2">
+          <li>Built multimodal pipeline deployed as a Go microservice.</li>
+          <li>Improved recognition accuracy across accents by 20%.</li>
+          <li>Monitored with Prometheus + Grafana dashboards.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          <Card className="shadow-lg">
-            <CardContent className="p-6">
-              <h3 className="font-bold text-lg">Research Assistant @ UCCS</h3>
-              <p className="text-sm text-gray-500">Aug 2023 – May 2024</p>
-              <ul className="list-disc list-inside mt-3 space-y-2">
-                <li>Built <strong>Go + Python ML pipelines</strong> with Docker, K8s, and GCP.</li>
-                <li>Optimized inference with gRPC microservices, cutting latency by 25%.</li>
-                <li>Implemented observability (Prometheus, Grafana, OpenTelemetry) to monitor AI services.</li>
-              </ul>
-            </CardContent>
-          </Card>
+  <!-- Certifications -->
+  <section id="certifications" class="container mx-auto py-12 px-4">
+    <h2 class="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6">Certifications</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Python for Data Science and AI – Coursera, Aug 2020</li>
+      <li>Overview of Data Visualization – Coursera, Jan 2024</li>
+    </ul>
+  </section>
 
-          <Card className="shadow-lg">
-            <CardContent className="p-6">
-              <h3 className="font-bold text-lg">Senior Software Engineer @ Accolite</h3>
-              <p className="text-sm text-gray-500">Aug 2021 – Jan 2023</p>
-              <ul className="list-disc list-inside mt-3 space-y-2">
-                <li>Developed <strong>Go-based backend APIs</strong> serving millions of requests daily.</li>
-                <li>Scaled systems with <strong>Kafka + Redis</strong> for event-driven architecture.</li>
-                <li>Deployed services via ArgoCD and GitHub Actions with 99.99% uptime.</li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+  <!-- Contact -->
+  <section id="contact" class="container mx-auto py-12 px-4">
+    <h2 class="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6">Contact</h2>
+    <p>Email: <a href="mailto:neetatechy@gmail.com" class="text-blue-600">neetatechy@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/neeta-kannu" target="_blank" class="text-blue-600">linkedin.com/in/neeta-kannu</a></p>
+    <p>GitHub: <a href="https://github.com/NeetaCode" target="_blank" class="text-blue-600">github.com/NeetaCode</a></p>
+    <p class="mt-4">
+      <a href="https://raw.githubusercontent.com/NeetaCode/Profile/main/Resume_Neeta_Kannu.pdf" download
+         class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700">
+        Download Resume
+      </a>
+    </p>
+  </section>
 
-      {/* Projects */}
-      <section id="projects" className="container mx-auto py-12 px-4">
-        <h2 className="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6">
-          Projects
-        </h2>
-        <div className="grid gap-6 md:grid-cols-2">
-          <Card className="shadow-lg">
-            <CardContent className="p-6">
-              <h3 className="font-bold">Prompt Engineering for LLMs</h3>
-              <p className="text-sm text-gray-500">2025</p>
-              <ul className="list-disc list-inside mt-3 space-y-2">
-                <li>Deployed RAG-based chatbot using Go microservices + Python ML.</li>
-                <li>Integrated Pinecone vector DB for semantic search.</li>
-                <li>Optimized cost via LoRA fine-tuning with Hugging Face + PEFT.</li>
-              </ul>
-            </CardContent>
-          </Card>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 text-center py-4 mt-12">
+    © 2025 Neeta Kannu
+  </footer>
 
-          <Card className="shadow-lg">
-            <CardContent className="p-6">
-              <h3 className="font-bold">Accent Identification Model</h3>
-              <p className="text-sm text-gray-500">2023</p>
-              <ul className="list-disc list-inside mt-3 space-y-2">
-                <li>Built multimodal pipeline deployed as a Go service with TensorFlow backend.</li>
-                <li>Improved speech recognition accuracy across diverse accents by 20%.</li>
-                <li>Implemented CI/CD with GitHub Actions and monitored with Prometheus.</li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section id="contact" className="container mx-auto py-12 px-4">
-        <h2 className="text-2xl font-bold border-b-2 border-blue-500 inline-block pb-2 mb-6">
-          Contact
-        </h2>
-        <p>Email: <a href="mailto:neetatechy@gmail.com" className="text-blue-600">neetatechy@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/neeta-kannu" target="_blank" className="text-blue-600">linkedin.com/in/neeta-kannu</a></p>
-        <p>GitHub: <a href="https://github.com/NeetaCode" target="_blank" className="text-blue-600">github.com/NeetaCode</a></p>
-        <Button className="mt-4">
-          <a href="https://raw.githubusercontent.com/NeetaCode/Profile/main/Resume_Neeta_Kannu.pdf" download>Download Resume</a>
-        </Button>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 text-center py-4 mt-12">
-        © 2025 Neeta Kannu
-      </footer>
-    </main>
-  );
-}
+</body>
+</html>
