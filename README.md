@@ -1,6 +1,6 @@
 # Hi, I'm Neeta — AI/ML Engineer & Software Developer
 
-AI/ML Engineer with 8 years in software engineering and 2 years in deep learning, LLMs, NLP, RL, and speech recognition.  
+AI/ML Engineer with 8 years in software engineering and 2.5 years in deep learning, LLMs, NLP, RL, and speech recognition.  
 I design and scale **production-grade, cloud-native AI systems** that deliver up to **30% faster inference** and **20% higher model accuracy** across NLP, vision, and RL domains.  
 Proficient in **Python, PyTorch, TensorFlow, Docker, Kubernetes, GCP, and Azure**.
 
