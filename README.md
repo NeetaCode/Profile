@@ -38,6 +38,11 @@ Courses: Operating Systems, Linux, C, Java, Software Engineering
 
 ---
 
+### 🧠 LeetCode
+
+![LeetCode Stats](https://leetcard.jacoblin.cool/NeetaCode?theme=light&font=Karma)
+
+
 ### 📎 Links
 [Resume](#) · [LinkedIn](#) · [Hugging Face](#) · [Google Scholar](#) · [Email](mailto:you@domain)
 
