@@ -39,7 +39,7 @@ Courses: Operating Systems, Linux, C, Java, Software Engineering
 ---
 
 ### 🧠 LeetCode
-![LeetCode 50 Days Badge](./leetcode-50-days-2025.png)
+<img src="./leetcode-50-days-2025.png" width="80" />
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/neetaLeet?theme=light&font=Karma)
 
